@@ -2,6 +2,10 @@
 
 This is the fourth assignment in the Teamwork Course @ SoftUni. 
 
+	Trello: https://trello.com/b/nadlBXsp/petslostandfound
+
+	Invision: https://projects.invisionapp.com/freehand/document/RLqdE2ROJ
+
 Topic: **Pets Lost And Found**
 
 
