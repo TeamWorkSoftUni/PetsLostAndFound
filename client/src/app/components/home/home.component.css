@@ -1,0 +1,20 @@
+.container {
+    max-width: 1500px;
+    max-height: 700px;
+    
+}
+
+ngb-carousel {
+    max-width: 100%;
+    height: 650px;
+}
+
+img {
+    width: 100%;
+    height: 650px;
+}
+
+.carousel-caption {
+    color: rgb(8, 6, 6);
+}
+
