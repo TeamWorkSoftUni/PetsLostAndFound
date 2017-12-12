@@ -1,0 +1,6 @@
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.deps.json
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.dll
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.csprojResolveAssemblyReference.cache
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.csproj.CoreCompileInputs.cache
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfoInputs.cache
+c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfo.cs
