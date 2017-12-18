@@ -1,0 +1,20 @@
+<div class="container">
+  <form class="form-location">
+
+    <div class="container">
+      <div class="form-group">
+        <input placeholder="search for location" id="searchControl" autocorrect="off" autocapitalize="off" spellcheck="off" type="text"
+          class="form-control" #search [formControl]="searchControl">
+       
+      </div>
+      <agm-map [latitude]="latitude" [longitude]="longitude" [scrollwheel]="false" [zoom]="zoom"
+      [mapTypeId]="mapType"
+      (centerChange)="centerChanged($event)"
+      >
+        <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+      </agm-map>
+
+    </div>
+    <button (click)="changeViewMap()">Change Map View</button>
+  </form>
+</div>

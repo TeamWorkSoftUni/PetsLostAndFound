@@ -1,6 +1,6 @@
 footer {
     background-color: cadetblue;
-    position:fixed;
+    position:relative;
     bottom: 0px;
     padding-top: 10px;
     width: 100%;
