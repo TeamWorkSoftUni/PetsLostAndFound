@@ -58,6 +58,8 @@
                 placeholder="RFID" 
                 required
                 formControlName="rfid">
+          <span class="text-danger" *ngIf="!reportToRegister.controls['rfid'].valid && reportToRegister.controls['rfid'].touched">Please enter RFID</span>
+          
         </div>
       </div>
 
@@ -65,21 +67,16 @@
         <div class="col-md-3">
           <h4>How it looks like?</h4>
         </div>
-        <div class="col-md-9">
-          <label for="imagesLinks" class="sr-only">Images of pet</label>
-          <input type="text" 
-                id="imagesLinks" 
-                class="form-control" 
-                placeholder="Images of pet" 
-                required
-                formControlName="imagesLinks">
-                <span class="text-danger" *ngIf="!reportToRegister.controls['imagesLinks'].valid && reportToRegister.controls['imagesLinks'].touched">Please enter valid links</span>
-             
-        </div>
+       
+        <form>
+            <app-images-form (uploadedImagesId)="onUploadedImagesId($event)" ></app-images-form>
         
+        </form>
+        
+      
       </div>  
 
-      <div class="row" *ngIf="reportToRegister.controls['imagesLinks'].valid">
+      <div class="row" *ngIf="hasImages">
           <div class="col-md-3">
             <h4>Where was {{selectedStatusType}}?</h4>
           </div>
@@ -90,7 +87,7 @@
           </div>
       </div>
 
-      <div class="row" *ngIf="reportToRegister.controls['imagesLinks'].valid">
+      <div class="row" *ngIf="hasLocation">
         <div class="col-md-3">
           <h4>Do you want to leave a message?</h4>
         </div>
@@ -105,7 +102,7 @@
         </div>
       </div>
 
-      <div class="row" *ngIf="reportToRegister.controls['imagesLinks'].valid && isLost">
+      <div class="row" *ngIf="hasLocation && isLost">
         <div class="col-md-3">
           <h4>Do you want to grant reward?</h4>
         </div>
@@ -122,9 +119,9 @@
 
     </div>
 
-    <button *ngIf="reportToRegister.controls['imagesLinks'].valid"
+    <button *ngIf="hasLocation"
             type="submit" 
-            class="btn btn-lg btn-primary btn-block">SIGN UP
+            class="btn btn-lg btn-primary btn-block">Register Report
     </button>
     <span class="text-danger" *ngIf="error">{{errorMessage}}</span>
 
