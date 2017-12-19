@@ -11,12 +11,10 @@ namespace PetsLostAndFound.Models
         public string Content { get; set; }
 
         public int UserId { get; set; }
-
         [Required]
         public User User { get; set; }
         
         public int PostId { get; set; }
-
         [Required]
         public Report Post { get; set; }
 

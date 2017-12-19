@@ -684,8 +684,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Ginko\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Users\\Vesko\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -694,20 +693,18 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "c:\\users\\ginko\\source\\repos\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
+      "projectUniqueName": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
       "projectName": "PetsLostAndFound.Models",
-      "projectPath": "c:\\users\\ginko\\source\\repos\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
-      "packagesPath": "C:\\Users\\Ginko\\.nuget\\packages\\",
-      "outputPath": "c:\\users\\ginko\\source\\repos\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\obj\\",
+      "projectPath": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
+      "packagesPath": "C:\\Users\\Vesko\\.nuget\\packages\\",
+      "outputPath": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Ginko\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "C:\\Users\\Vesko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.0"
@@ -730,15 +727,15 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
+          "System.Device.Location.Portable": {
+            "target": "Package",
+            "version": "1.0.0"
+          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "[2.0.0, )",
+            "version": "2.0.0",
             "autoReferenced": true
-          },
-          "System.Device.Location.Portable": {
-            "target": "Package",
-            "version": "[1.0.0, )"
           }
         },
         "imports": [

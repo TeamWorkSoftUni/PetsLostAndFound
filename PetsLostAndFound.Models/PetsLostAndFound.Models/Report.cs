@@ -38,11 +38,8 @@ namespace PetsLostAndFound.Models
         /// </summary>
         public double? RewardSum { get; set; }
 
-        /// <summary>
-        /// Has to be optional 
-        /// No idea what datatype to use on this one , but it should be the chip freqency of the pet
-        /// </summary>
-        public string RFID { get; set; }
+        public int PetId { get; set; }
+        public Pet Pet { get; set; }
 
         /// <summary>
         /// A general text field which gives the user the ability to add more details about how , where the pet was lost

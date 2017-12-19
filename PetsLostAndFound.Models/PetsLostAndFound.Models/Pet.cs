@@ -1,11 +1,17 @@
-﻿using System;
-using System.ComponentModel.DataAnnotations;
-using PetsLostAndFound.Models.Enums;
-
-namespace PetsLostAndFound.Models
+﻿namespace PetsLostAndFound.Models
 {
+    using System;
+    using System.ComponentModel.DataAnnotations;
+    using PetsLostAndFound.Models.Enums;
+    using System.Collections.Generic;
+
     public class Pet
     {
+        public Pet()
+        {
+            this.Reports = new List<Report>();
+        }
+
         public int Id { get; set; }
 
         // Specify the type of pet that has been lost enum for now
@@ -15,6 +21,12 @@ namespace PetsLostAndFound.Models
         public string Name { get; set; }
 
         public int Age { get; set; }
+
+        /// <summary>
+        /// Has to be optional 
+        /// No idea what datatype to use on this one , but it should be the chip freqency of the pet
+        /// </summary>
+        public string RFID { get; set; }
 
         /// <summary>
         /// Maybe have a collection of images for the pets
@@ -29,6 +41,8 @@ namespace PetsLostAndFound.Models
 
         [Required]
         public User User { get; set; }
+
+        public ICollection<Report> Reports { get; set; }
 
     }
 }
