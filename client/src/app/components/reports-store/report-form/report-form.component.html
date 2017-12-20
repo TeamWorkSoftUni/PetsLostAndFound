@@ -56,14 +56,14 @@
                 id="rfid" 
                 class="form-control" 
                 placeholder="RFID" 
-                required
+                
                 formControlName="rfid">
           <span class="text-danger" *ngIf="!reportToRegister.controls['rfid'].valid && reportToRegister.controls['rfid'].touched">Please enter RFID</span>
           
         </div>
       </div>
 
-      <div class="row" *ngIf="reportToRegister.controls['rfid'].valid">
+      <div class="row" *ngIf="hasPet">
         <div class="col-md-3">
           <h4>How it looks like?</h4>
         </div>
@@ -119,7 +119,7 @@
 
     </div>
 
-    <button *ngIf="hasLocation"
+    <button *ngIf="hasLocation && hasPet"
             type="submit" 
             class="btn btn-lg btn-primary btn-block">Register Report
     </button>

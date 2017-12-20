@@ -13,6 +13,8 @@ export class PetFormComponent implements OnInit {
   model: {}
   public petToRegister: FormGroup;
   @Output() newPet = new EventEmitter<Object>()
+  public hasPetType: boolean = false
+  public hasPetDescription: boolean = false
 
   constructor() {
     this.model = {
@@ -21,13 +23,25 @@ export class PetFormComponent implements OnInit {
       age: '',
       description: ''
     }
+    console.log('tuks')
    }
 
   ngOnInit() {
     
   }
 
- 
+  isPetTypeValid(e){
+    console.log(e)
+    if(e.target.value.length > 2){
+      this.hasPetType = true
+    }
+  }
+
+  isDescriptionValid(e){
+    if(e.target.value.length > 3){
+      this.hasPetDescription = true
+    }
+  }
 
   petFillData(event){
     this.newPet.emit(this.model)

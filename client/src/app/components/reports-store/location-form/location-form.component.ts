@@ -43,7 +43,6 @@ export class LocationFormComponent implements OnInit {
 
     //load Places Autocomplete
     this.mapsAPILoader.load().then(() => {
-      console.log(this.searchControl)
       let autocomplete = new google.maps.places.Autocomplete(this.searchElementRef.nativeElement, {
         types: ["address"]
       });
@@ -86,7 +85,6 @@ export class LocationFormComponent implements OnInit {
       latitude: this.latitude,
       longitude: this.longitude
     })
-    console.log(this.latitude)
   }
 
   changeViewMap() {

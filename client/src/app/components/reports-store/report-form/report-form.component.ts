@@ -23,6 +23,8 @@ export class ReportFormComponent implements OnInit {
   public targetPetImagesId: {}
   public hasImages: boolean = false
   public hasLocation: boolean = false
+  public hasPet: boolean = false
+  
   
  
   constructor(public fb: FormBuilder,
@@ -37,7 +39,7 @@ export class ReportFormComponent implements OnInit {
           'statusType': ['', Validators.required],
           'lostFoundDate': ['', Validators.required],
           'content': [''],
-          'rfid': ['', Validators.required],
+          'rfid': [''],
           'rewardSum': [''],
       });
   }
@@ -62,6 +64,7 @@ export class ReportFormComponent implements OnInit {
 
   onNewPet(event) {
     this.targetPet = event
+    this.hasPet = true
   }
 
   onUploadedImagesId(event) {
@@ -77,7 +80,7 @@ export class ReportFormComponent implements OnInit {
     this.reportToRegister.value.targetPetImagesId = this.targetPetImagesId
     
 
-    console.log(this.reportToRegister.value)
+    console.log(JSON.stringify(this.reportToRegister.value))
       // this.authService
       //     .register(this.userToRegister.value)
       //     .subscribe((res: any) => {

@@ -25,7 +25,7 @@ export class ImagesFormComponent implements OnInit {
           } else {
             this.imagesId.push(res.public_id);
           }
-          
+          this.uploadedImagesId.emit(this.imagesId)
           
           return { item, response, status, headers };
       };
@@ -33,7 +33,8 @@ export class ImagesFormComponent implements OnInit {
 
   upload() {
       this.uploader.uploadAll();
-      this.uploadedImagesId.emit(this.imagesId)
+      //this.uploadedImagesId.emit(this.imagesId)
+      console.log(this.imagesId)
   }
 
   ngOnInit() {
