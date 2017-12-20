@@ -20,6 +20,10 @@ export class ReportFormComponent implements OnInit {
   public reportToRegister: FormGroup;
   public location: {}
   public targetPet: {}
+  public targetPetImagesId: {}
+  public hasImages: boolean = false
+  public hasLocation: boolean = false
+  
  
   constructor(public fb: FormBuilder,
       public reportService: ReportService,
@@ -32,7 +36,6 @@ export class ReportFormComponent implements OnInit {
       this.reportToRegister = this.fb.group({
           'statusType': ['', Validators.required],
           'lostFoundDate': ['', Validators.required],
-          'imagesLinks': ['', Validators.required],
           'content': [''],
           'rfid': ['', Validators.required],
           'rewardSum': [''],
@@ -54,10 +57,16 @@ export class ReportFormComponent implements OnInit {
 
   selectedLocation(event) {
     this.location = event
+    this.hasLocation = true
   }
 
   onNewPet(event) {
     this.targetPet = event
+  }
+
+  onUploadedImagesId(event) {
+    this.targetPetImagesId = event
+    this.hasImages = true
   }
 
   register(file): void {
@@ -65,6 +74,7 @@ export class ReportFormComponent implements OnInit {
     this.reportToRegister.value.location = this.location
     this.reportToRegister.value.userId = this.userId
     this.reportToRegister.value.targetPet = this.targetPet
+    this.reportToRegister.value.targetPetImagesId = this.targetPetImagesId
     
 
     console.log(this.reportToRegister.value)
