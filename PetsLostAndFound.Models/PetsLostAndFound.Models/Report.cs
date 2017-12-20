@@ -7,6 +7,11 @@ namespace PetsLostAndFound.Models
 {
     public class Report
     {
+        public Report()
+        {
+            this.Comments = new List<Comment>();
+        }
+
         public int Id { get; set; }
 
         // Lost or Found
@@ -47,7 +52,6 @@ namespace PetsLostAndFound.Models
         public string Content { get; set; }
 
         public int LocationId { get; set; }
-
         [Required]
         public Location Location { get; set; }
     }

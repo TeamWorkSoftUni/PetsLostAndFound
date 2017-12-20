@@ -8,22 +8,26 @@ namespace PetsLostAndFound.Models
 {
     public class User
     {
-        /// <summary>
-        /// There is a method for creating UUID 
-        /// Stackoverflow says it can work like this : String UUID = Guid.NewGuid().ToString() 
-        /// </summary>
-        public string UUID { get; set; }
+        public User()
+        {
+            this.Reports = new List<Report>();
+            this.Comments = new List<Comment>();
+            this.Pets = new List<Pet>();
+        }
+
+        public int Id { get; set; }
 
         /// <summary>
         /// Ginko Grudev: Started addign the barebones decided to use class libraries so it's easier to use it
         /// </summary>
         [Required]
-        public string Name { get; set; }
+        public string Username { get; set; }
 
         [Required]
         public string Email { get; set; }
 
         // No idea how to store this
+        [Required]
         public string Password { get; set; }
 
         [Required]
