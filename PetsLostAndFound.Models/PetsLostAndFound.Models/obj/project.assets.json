@@ -684,7 +684,7 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vesko\\.nuget\\packages\\": {},
+    "C:\\Users\\Dimito\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -693,17 +693,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
+      "projectUniqueName": "E:\\01. SoftUni\\10. Practiacal work in team\\05. Final Project\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
       "projectName": "PetsLostAndFound.Models",
-      "projectPath": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
-      "packagesPath": "C:\\Users\\Vesko\\.nuget\\packages\\",
-      "outputPath": "D:\\programming\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\obj\\",
+      "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\05. Final Project\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\PetsLostAndFound.Models.csproj",
+      "packagesPath": "C:\\Users\\Dimito\\.nuget\\packages\\",
+      "outputPath": "E:\\01. SoftUni\\10. Practiacal work in team\\05. Final Project\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Models\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vesko\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dimito\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -727,15 +727,15 @@
     "frameworks": {
       "netcoreapp2.0": {
         "dependencies": {
-          "System.Device.Location.Portable": {
-            "target": "Package",
-            "version": "1.0.0"
-          },
           "Microsoft.NETCore.App": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "System.Device.Location.Portable": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
