@@ -7,11 +7,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FileUploadModule } from 'ng2-file-upload';
 import { ReportsModule } from './components/reports-store/reports.module';
 
-
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
-import { RegisterComponent} from './components/authentication/register/register.component';
 import { LoginComponent } from './components/authentication/login/login.component';
 import  { HomeComponent } from './components/home/home.component';
 
@@ -24,7 +22,6 @@ import { UserService } from './services/user.service';
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    RegisterComponent,
     LoginComponent,
     HomeComponent,
   ],
