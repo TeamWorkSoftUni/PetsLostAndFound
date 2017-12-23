@@ -4,3 +4,12 @@ c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\
 c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.csproj.CoreCompileInputs.cache
 c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfoInputs.cache
 c:\users\ginko\source\repos\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfo.cs
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.deps.json
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.dll
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.pdb
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.csprojResolveAssemblyReference.cache
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.csproj.CoreCompileInputs.cache
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfoInputs.cache
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.AssemblyInfo.cs
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.dll
+E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Models\obj\Debug\netcoreapp2.0\PetsLostAndFound.Models.pdb
