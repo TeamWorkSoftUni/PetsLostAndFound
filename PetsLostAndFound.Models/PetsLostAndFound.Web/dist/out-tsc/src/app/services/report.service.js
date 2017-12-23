@@ -33,10 +33,10 @@ var ReportService = /** @class */ (function () {
     };
     ReportService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object, http_headers_service_1.HttpHeadersService])
+        __metadata("design:paramtypes", [http_1.Http,
+            http_headers_service_1.HttpHeadersService])
     ], ReportService);
     return ReportService;
-    var _a;
 }());
 exports.ReportService = ReportService;
 //# sourceMappingURL=report.service.js.map

@@ -56,10 +56,11 @@ var RegisterComponent = /** @class */ (function () {
             templateUrl: './register.component.html',
             styleUrls: ['./register.component.css']
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof forms_1.FormBuilder !== "undefined" && forms_1.FormBuilder) === "function" && _a || Object, authentication_service_1.AuthenticationService, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
+        __metadata("design:paramtypes", [forms_1.FormBuilder,
+            authentication_service_1.AuthenticationService,
+            router_1.Router])
     ], RegisterComponent);
     return RegisterComponent;
-    var _a, _b;
 }());
 exports.RegisterComponent = RegisterComponent;
 //# sourceMappingURL=register.component.js.map

@@ -1,0 +1,73 @@
+<div class="container">
+    <form  #loginForm="ngForm">
+      
+      <div class="container">
+          <div class="col-md-12">
+              <div class="form-group">
+                  <label for="petType">Pet type</label>
+                  <select type="text" class="form-control" id="petType" 
+                  required
+                  [(ngModel)]="model.petType"
+                  name="petType"
+                  #petType="ngModel"
+                  (click)="isPetTypeValid($event)">
+                  <option value="">Please select</option>
+                  <option value="dog">Dog</option>
+                  <option value="cat">Cat</option>
+                  <option value="bird">Bird</option>
+                  <option value="reptilian">Reptilian</option>
+                  <option value="other">Other</option>
+                </select>
+                  <div *ngIf="!hasPetType" class="alert alert-danger">
+                   Type of pet is required!
+                  </div>
+                </div>
+          </div>
+
+          <div class="row" *ngIf="isLost">
+            <div class="col-md-12">
+                <div class="form-group">
+                    <label for="petName">Pet name</label>
+                    <input type="text" class="form-control" id="petName" 
+                   
+                    [(ngModel)]="model.petName"
+                    name="petName"
+                    #petName="ngModel">   
+                </div>
+            </div>
+          </div>
+  
+        <div class="row" *ngIf="isLost">
+          <div class="col-md-12">           
+              <div class="form-group">
+                  <label for="age">Age of pet:</label>
+                  <input type="number" class="form-control" id="age"  
+                  [(ngModel)]="model.age"
+                  name="age"
+                  #age="ngModel">  
+              </div>
+          </div>
+        </div>  
+
+        <div class="row">
+            <div class="col-md-12">            
+                <div class="form-group">
+                    <label for="description">Description</label>
+                    <textarea (keyup)=petFillData(event) rows="4" cols="50" type="text"  class="form-control" id="description" 
+                    required
+                    [(ngModel)]="model.description"
+                    name="description"
+                    #description="ngModel"
+                    (keyup)="isDescriptionValid($event)"
+                    ></textarea>
+                    <div [hidden]="hasPetDescription" class="alert alert-danger">
+                        Description of pet is required!
+                    </div>
+                </div>     
+            </div>
+        </div>         
+       
+      </div>
+  
+    </form>
+  </div>

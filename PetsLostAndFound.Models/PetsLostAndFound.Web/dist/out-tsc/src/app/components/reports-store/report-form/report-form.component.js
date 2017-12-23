@@ -88,10 +88,11 @@ var ReportFormComponent = /** @class */ (function () {
             templateUrl: './report-form.component.html',
             styleUrls: ['./report-form.component.css']
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof forms_1.FormBuilder !== "undefined" && forms_1.FormBuilder) === "function" && _a || Object, report_service_1.ReportService, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object])
+        __metadata("design:paramtypes", [forms_1.FormBuilder,
+            report_service_1.ReportService,
+            router_1.Router])
     ], ReportFormComponent);
     return ReportFormComponent;
-    var _a, _b;
 }());
 exports.ReportFormComponent = ReportFormComponent;
 //# sourceMappingURL=report-form.component.js.map

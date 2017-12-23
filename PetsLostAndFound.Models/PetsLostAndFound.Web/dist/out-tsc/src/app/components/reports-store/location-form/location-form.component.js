@@ -83,7 +83,7 @@ var LocationFormComponent = /** @class */ (function () {
     ], LocationFormComponent.prototype, "selectedLocation", void 0);
     __decorate([
         core_1.ViewChild("search"),
-        __metadata("design:type", typeof (_a = typeof core_1.ElementRef !== "undefined" && core_1.ElementRef) === "function" && _a || Object)
+        __metadata("design:type", core_1.ElementRef)
     ], LocationFormComponent.prototype, "searchElementRef", void 0);
     LocationFormComponent = __decorate([
         core_1.Component({
@@ -91,10 +91,10 @@ var LocationFormComponent = /** @class */ (function () {
             templateUrl: './location-form.component.html',
             styleUrls: ['./location-form.component.css']
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof core_2.MapsAPILoader !== "undefined" && core_2.MapsAPILoader) === "function" && _b || Object, typeof (_c = typeof core_1.NgZone !== "undefined" && core_1.NgZone) === "function" && _c || Object])
+        __metadata("design:paramtypes", [core_2.MapsAPILoader,
+            core_1.NgZone])
     ], LocationFormComponent);
     return LocationFormComponent;
-    var _a, _b, _c;
 }());
 exports.LocationFormComponent = LocationFormComponent;
 //# sourceMappingURL=location-form.component.js.map

@@ -59,10 +59,9 @@ var UserService = /** @class */ (function () {
     };
     UserService = __decorate([
         core_1.Injectable(),
-        __metadata("design:paramtypes", [typeof (_a = typeof http_1.Http !== "undefined" && http_1.Http) === "function" && _a || Object])
+        __metadata("design:paramtypes", [http_1.Http])
     ], UserService);
     return UserService;
-    var _a;
 }());
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

@@ -1,0 +1,12 @@
+#header {
+  background-color: cadetblue;
+}
+
+.nav-link {
+  color: white;
+}
+
+.form-control {
+  margin-left: 20px;
+  margin-right: 10px;
+}

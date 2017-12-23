@@ -63,10 +63,12 @@ var LoginComponent = /** @class */ (function () {
             templateUrl: './login.component.html',
             styleUrls: ['./login.component.css']
         }),
-        __metadata("design:paramtypes", [typeof (_a = typeof forms_1.FormBuilder !== "undefined" && forms_1.FormBuilder) === "function" && _a || Object, authentication_service_1.AuthenticationService, typeof (_b = typeof router_1.Router !== "undefined" && router_1.Router) === "function" && _b || Object, user_service_1.UserService])
+        __metadata("design:paramtypes", [forms_1.FormBuilder,
+            authentication_service_1.AuthenticationService,
+            router_1.Router,
+            user_service_1.UserService])
     ], LoginComponent);
     return LoginComponent;
-    var _a, _b;
 }());
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map
