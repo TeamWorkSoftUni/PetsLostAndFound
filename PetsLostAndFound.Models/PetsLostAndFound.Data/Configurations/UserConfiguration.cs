@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using PetsLostAndFound.Models;
+    using Data.Models;
 
     public class UserConfiguration:IEntityTypeConfiguration<User>
     {

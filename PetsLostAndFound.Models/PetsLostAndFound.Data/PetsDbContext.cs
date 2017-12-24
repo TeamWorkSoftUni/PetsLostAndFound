@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using PetsLostAndFound.Data.Configurations;
-    using PetsLostAndFound.Models;
+    using Data.Models;
 
     public class PetsDbContext:DbContext
     {

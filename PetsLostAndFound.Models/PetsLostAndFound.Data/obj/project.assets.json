@@ -3365,7 +3365,8 @@
     ".NETCoreApp,Version=v2.0": [
       "Microsoft.EntityFrameworkCore.SqlServer >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
-      "PetsLostAndFound.Models >= 1.0.0"
+      "PetsLostAndFound.Models >= 1.0.0",
+      "System.Device.Location.Portable >= 1.0.0"
     ]
   },
   "packageFolders": {
@@ -3425,6 +3426,10 @@
             "target": "Package",
             "version": "[2.0.0, )",
             "autoReferenced": true
+          },
+          "System.Device.Location.Portable": {
+            "target": "Package",
+            "version": "[1.0.0, )"
           }
         },
         "imports": [
