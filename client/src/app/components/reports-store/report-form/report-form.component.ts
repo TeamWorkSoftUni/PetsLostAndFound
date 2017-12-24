@@ -12,6 +12,7 @@ import { Constants } from '../../../constants/constants';
   styleUrls: ['./report-form.component.css']
 })
 export class ReportFormComponent implements OnInit {
+  currentDateAsString: string;
 
   public userId: string;
   public isFound: boolean = false;
@@ -24,7 +25,7 @@ export class ReportFormComponent implements OnInit {
   public hasImages: boolean = false
   public hasLocation: boolean = false
   public hasPet: boolean = false
-  
+  currentDate: Date = new Date(Date.now())
   
  
   constructor(public fb: FormBuilder,
@@ -34,6 +35,7 @@ export class ReportFormComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.currentDateAsString = this.currentDate.toISOString().substring(0,10)
 
       this.reportToRegister = this.fb.group({
           'statusType': ['', Validators.required],

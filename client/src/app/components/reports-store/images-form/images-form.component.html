@@ -1,11 +1,11 @@
 <div class="container">
-  <h2 class="form-signin-heading">Add images:</h2>
+ <!-- <h2 class="form-signin-heading">Add images:</h2>-->
   <input type="file" ng2FileSelect [uploader]="uploader" accept="image/*;capture=camera">
 
   <input type="submit" (click)="upload()" value="Add image">
   <div>
     <div class="inside" *ngFor="let imageId of imagesId" >
-      <cl-image [public-id]="imageId" [cloud-name]="uploader.cloudName" height="300"></cl-image>
+      <cl-image [public-id]="imageId" [cloud-name]="uploader.cloudName" height="300" width="400"></cl-image>
     </div>
   </div>
 </div>

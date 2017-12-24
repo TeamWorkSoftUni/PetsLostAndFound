@@ -10,6 +10,7 @@ import { OutletContext } from '@angular/router/src/router_outlet_context';
   styleUrls: ['./location-form.component.css']
 })
 export class LocationFormComponent implements OnInit {
+  locationName: string;
  
   public latitude: number;
   public longitude: number;
@@ -51,7 +52,8 @@ export class LocationFormComponent implements OnInit {
           
           //get the place result
           let place: google.maps.places.PlaceResult = autocomplete.getPlace();
-          console.log(place)
+          this.locationName = place.formatted_address;
+          //console.log(place)
           //verify result
           if (place.geometry === undefined || place.geometry === null) {
             return;
@@ -82,6 +84,7 @@ export class LocationFormComponent implements OnInit {
     this.latitude = event.lat;
     this.longitude = event.lng;
     this.selectedLocation.emit({
+      locationAdress: this.locationName,
       latitude: this.latitude,
       longitude: this.longitude
     })

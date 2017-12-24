@@ -85,6 +85,7 @@ export class RegisterComponent implements OnInit {
   }
 
   register(file): void {
+    this.userToRegister.value.userImagesId = this.userImagesId
     console.log(JSON.stringify(this.userToRegister.value))
       // this.authService
       //     .register(this.userToRegister.value)

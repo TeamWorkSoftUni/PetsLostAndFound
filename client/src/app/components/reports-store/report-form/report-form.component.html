@@ -30,11 +30,12 @@
           <h4>When?</h4>
         </div>
         <div class="col-md-9">
-          <label for="lostFoundDate" class="sr-only">Date:</label>
+          <label for="lostFoundDate" class="sr-only" >Date:</label>
           <input type="date" 
                 id="lostFoundDate" 
                 class="browser-default" 
                 placeholder="Select date" 
+                max="{{currentDateAsString}}"
                 #status
                 required autofocus
                 formControlName="lostFoundDate">
@@ -66,6 +67,7 @@
       <div class="row" *ngIf="hasPet">
         <div class="col-md-3">
           <h4>How it looks like?</h4>
+          <h3>Add images:</h3>
         </div>
        
         <form>
