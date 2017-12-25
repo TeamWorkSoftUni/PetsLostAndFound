@@ -23,6 +23,37 @@
           formControlName="email">
     <span class="text-danger" *ngIf="!userToRegister.controls['email'].valid && userToRegister.controls['email'].touched">Please enter valid E-mail</span>
     
+    <label for="telephoneNumber" class="sr-only">Telephone number</label>
+    <input type="text" 
+          id="telephoneNumber" 
+          class="form-control" 
+          placeholder="Telephone number" 
+          required autofocus
+          formControlName="telephoneNumber">
+    <span class="text-danger" *ngIf="!userToRegister.controls['telephoneNumber'].valid && userToRegister.controls['telephoneNumber'].touched">Please enter valid telephone number</span>
+
+    <label for="locationName" class="sr-only">Location</label>
+    <input type="text"
+          id="locationName"
+          class="form-control"
+          placeholder="Search..." 
+          autocorrect="off" 
+          autocapitalize="off" 
+          spellcheck="off"
+          [(ngModel)]="locationName"
+          formControlName="locationName"
+          #search [formControl]="locationName">
+    <span class="text-danger" *ngIf="!userToRegister.controls['locationName'].valid && userToRegister.controls['locationName'].touched">Please enter valid location</span>
+     
+    <input type="number" [(ngModel)]="latitude" formControlName="latitude" hidden>
+    <input type="number" [(ngModel)]="longitude" formControlName="longitude" hidden>
+
+    <div class="form-control">
+      <form>
+            <app-images-form (uploadedImagesId)="onUploadedImagesId($event)" ></app-images-form>
+      </form>
+    </div>
+
     <label for="password" class="sr-only">Password</label>
     <input type="password" 
           id="password" 
@@ -40,7 +71,7 @@
           formControlName="confirmedPassword">
           <span class="text-danger" *ngIf="userToRegister.controls['confirmedPassword'].value != userToRegister.controls['password'].value && userToRegister.controls ['confirmedPassword'].touched ">Passwords do not match</span>
     
-    <button [disabled]="!userToRegister.valid||userToRegister.controls['confirmedPassword'].value != userToRegister.controls['password'].value"
+    <button [disabled]="userToRegister.controls['confirmedPassword'].value != userToRegister.controls['password'].value"
             type="submit" 
             class="btn btn-lg btn-primary btn-block">SIGN UP
     </button>

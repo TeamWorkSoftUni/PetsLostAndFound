@@ -6,6 +6,7 @@ import { ReportsComponent } from './reports/reports.component';
 import { ReportFormComponent } from './report-form/report-form.component';
 import { ImagesFormComponent } from './images-form/images-form.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
+import { RegisterComponent} from '../../components/authentication/register/register.component';
 
 // Modules
 import { CommonModule } from '@angular/common';
@@ -30,6 +31,7 @@ import { ReportService } from '../../services/report.service';
     ReportFormComponent,
     ImagesFormComponent,
     PetFormComponent,
+    RegisterComponent
   ],
   imports: [ 
     CommonModule, 

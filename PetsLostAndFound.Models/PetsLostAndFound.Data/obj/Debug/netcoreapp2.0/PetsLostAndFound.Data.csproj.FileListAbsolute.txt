@@ -7,8 +7,6 @@ D:\programming\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\ob
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\bin\Debug\netcoreapp2.0\PetsLostAndFound.Data.deps.json
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\bin\Debug\netcoreapp2.0\PetsLostAndFound.Data.dll
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\bin\Debug\netcoreapp2.0\PetsLostAndFound.Data.pdb
-E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.dll
-E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\bin\Debug\netcoreapp2.0\PetsLostAndFound.Models.pdb
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\obj\Debug\netcoreapp2.0\PetsLostAndFound.Data.csprojResolveAssemblyReference.cache
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\obj\Debug\netcoreapp2.0\PetsLostAndFound.Data.csproj.CoreCompileInputs.cache
 E:\01. SoftUni\10. Practiacal work in team\05. Final Project\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\obj\Debug\netcoreapp2.0\PetsLostAndFound.Data.AssemblyInfoInputs.cache

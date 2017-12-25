@@ -9,7 +9,7 @@
       "PetsLostAndFound.Data/1.0.0": {
         "dependencies": {
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "PetsLostAndFound.Models": "1.0.0"
+          "System.Device.Location.Portable": "1.0.0"
         },
         "runtime": {
           "PetsLostAndFound.Data.dll": {}
@@ -428,14 +428,6 @@
           "Microsoft.NETCore.Targets": "1.0.1",
           "System.Runtime": "4.1.0"
         }
-      },
-      "PetsLostAndFound.Models/1.0.0": {
-        "dependencies": {
-          "System.Device.Location.Portable": "1.0.0"
-        },
-        "runtime": {
-          "PetsLostAndFound.Models.dll": {}
-        }
       }
     }
   },
@@ -801,11 +793,6 @@
       "sha512": "sha512-bDHoVqc14/sniJuwaOTJuYpYszFgfGIzCwUkoHtJHzCPJWFWbPVbobDw6nHrwLvXKqaTfl7A5s6jNnbmGdQ7HA==",
       "path": "system.threading.tasks/4.0.11",
       "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
-    },
-    "PetsLostAndFound.Models/1.0.0": {
-      "type": "project",
-      "serviceable": false,
-      "sha512": ""
     }
   }
 }

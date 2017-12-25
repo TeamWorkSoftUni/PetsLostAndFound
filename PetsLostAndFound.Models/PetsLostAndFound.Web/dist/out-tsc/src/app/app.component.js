@@ -10,29 +10,46 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var router_1 = require("@angular/router");
+var http_1 = require("@angular/http");
 var AppComponent = /** @class */ (function () {
-    function AppComponent(router) {
-        this.router = router;
+    function AppComponent(_httpService) {
+        this._httpService = _httpService;
+        this.apiValues = [];
     }
     AppComponent.prototype.ngOnInit = function () {
-        this.router.events.subscribe(function (evt) {
-            if (!(evt instanceof router_1.NavigationEnd)) {
-                return;
-            }
-            window.scrollTo(0, 0);
+        var _this = this;
+        this._httpService.get('/api/index').subscribe(function (values) {
+            _this.apiValues = values.json();
         });
     };
     AppComponent = __decorate([
         core_1.Component({
-            moduleId: module.id,
             selector: 'app-root',
             templateUrl: './app.component.html',
             styleUrls: ['./app.component.css']
         }),
-        __metadata("design:paramtypes", [router_1.Router])
+        __metadata("design:paramtypes", [http_1.Http])
     ], AppComponent);
     return AppComponent;
 }());
 exports.AppComponent = AppComponent;
+//import { Component } from '@angular/core';
+//import { Router, NavigationEnd } from '@angular/router';
+//@Component({
+//  moduleId: module.id,
+//  selector: 'app-root',
+//  templateUrl: './app.component.html',
+//  styleUrls: ['./app.component.css']
+//})
+//export class AppComponent {
+//  constructor(private router: Router) { }
+//  ngOnInit() {
+//    this.router.events.subscribe((evt) => {
+//      if (!(evt instanceof NavigationEnd)) {
+//        return;
+//      }
+//      window.scrollTo(0, 0)
+//    });
+//  }
+//}
 //# sourceMappingURL=app.component.js.map

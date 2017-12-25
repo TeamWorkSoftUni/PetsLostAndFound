@@ -26,7 +26,7 @@ export class ImagesFormComponent implements OnInit {
             this.imagesId.push(res.public_id);
           }
           this.uploadedImagesId.emit(this.imagesId)
-          
+          console.log(this.imagesId)
           return { item, response, status, headers };
       };
   }

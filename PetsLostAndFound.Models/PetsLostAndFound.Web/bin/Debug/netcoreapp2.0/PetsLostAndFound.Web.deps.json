@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "bf2fa39bd487900a883ba09fb48ad66acaf40d8e"
+    "signature": "e801a3592edcb355dfe597c25ed53c580b23c71b"
   },
   "compilationOptions": {
     "defines": [
@@ -26,7 +26,9 @@
           "Microsoft.AspNetCore.All": "2.0.3",
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
-          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1"
+          "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1",
+          "PetsLostAndFound.Data": "1.0.0",
+          "PetsLostAndFound.Services": "1.0.0"
         },
         "runtime": {
           "PetsLostAndFound.Web.dll": {}
@@ -3013,6 +3015,14 @@
           "ref/netstandard2.0/System.Data.SqlClient.dll": {}
         }
       },
+      "System.Device.Location.Portable/1.0.0": {
+        "runtime": {
+          "lib/System.Device.Portable.dll": {}
+        },
+        "compile": {
+          "lib/System.Device.Portable.dll": {}
+        }
+      },
       "System.Diagnostics.Contracts/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -4052,6 +4062,26 @@
         },
         "compile": {
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
+        }
+      },
+      "PetsLostAndFound.Data/1.0.0": {
+        "dependencies": {
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
+          "System.Device.Location.Portable": "1.0.0"
+        },
+        "runtime": {
+          "PetsLostAndFound.Data.dll": {}
+        },
+        "compile": {
+          "PetsLostAndFound.Data.dll": {}
+        }
+      },
+      "PetsLostAndFound.Services/1.0.0": {
+        "runtime": {
+          "PetsLostAndFound.Services.dll": {}
+        },
+        "compile": {
+          "PetsLostAndFound.Services.dll": {}
         }
       },
       "Microsoft.NETCore.App/2.0.0": {
@@ -5799,6 +5829,13 @@
       "path": "system.data.sqlclient/4.4.0",
       "hashPath": "system.data.sqlclient.4.4.0.nupkg.sha512"
     },
+    "System.Device.Location.Portable/1.0.0": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-VttxozXEleYcK2NiMo7xKMhDCCJbKtjnxcWDmqu703DeceLTI/9jopfEblyZKL0DWHGyOYLEan06yk6Hcv2cXw==",
+      "path": "system.device.location.portable/1.0.0",
+      "hashPath": "system.device.location.portable.1.0.0.nupkg.sha512"
+    },
     "System.Diagnostics.Contracts/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -6365,6 +6402,16 @@
       "sha512": "sha512-W6ZZ0/o7+3Qb77mRAQyLjPudHG3OMeeQ4p9yY13PUdJArmRCx2cLMm5F4tpIjJXxzHC0ew0oK7DMDGILMdfCnw==",
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
+    },
+    "PetsLostAndFound.Data/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetsLostAndFound.Services/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Microsoft.NETCore.App/2.0.0": {
       "type": "package",
