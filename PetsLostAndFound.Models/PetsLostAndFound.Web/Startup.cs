@@ -1,20 +1,16 @@
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Builder;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.Extensions.Configuration;
-using Microsoft.Extensions.DependencyInjection;
-using PetsLostAndFound.Web.Data;
-using PetsLostAndFound.Web.Models;
-using PetsLostAndFound.Web.Services;
-
 namespace PetsLostAndFound.Web
 {
-  using System.IO;
+  using Microsoft.AspNetCore.Builder;
+  using Microsoft.AspNetCore.Hosting;
+  using Microsoft.AspNetCore.Identity;
+  using Microsoft.EntityFrameworkCore;
+  using Microsoft.Extensions.Configuration;
+  using Microsoft.Extensions.DependencyInjection;
+  using Data;
+  using Microsoft.AspNetCore.Mvc;
+  using Microsoft.AspNetCore.Mvc.Cors.Internal;
+  using Models;
+  using Services;
 
   public class Startup
   {
@@ -38,45 +34,51 @@ namespace PetsLostAndFound.Web
       // Add application services.
       services.AddTransient<IEmailSender, EmailSender>();
 
+      services.AddCors();
+
       services.AddMvc();
+      services.Configure<MvcOptions>(options =>
+      {
+        options.Filters.Add(new CorsAuthorizationFilterFactory("http://localhost:4200"));
+      });
     }
 
     // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
-      app.Use(async (context, next) =>
-      {
-        await next();
-        if (context.Response.StatusCode == 404 &&
-            !Path.HasExtension(context.Request.Path.Value) &&
-            !context.Request.Path.Value.StartsWith("/api/"))
-        {
-          context.Request.Path = "/index.html";
-          await next();
-        }
-      });
-
-      //if (env.IsDevelopment())
+      //app.Use(async (context, next) =>
       //{
-      //    app.UseDeveloperExceptionPage();
-      //    app.UseBrowserLink();
-      //    app.UseDatabaseErrorPage();
-      //}
-      //else
-      //{
-      //    app.UseExceptionHandler("/Home/Error");
-      //}
-
-      //app.UseStaticFiles();
-
-      //app.UseAuthentication();
-
-      //app.UseMvc(routes =>
-      //{
-      //    routes.MapRoute(
-      //        name: "default",
-      //        template: "{controller=Home}/{action=Index}/{id?}");
+      //  await next();
+      //  if (context.Response.StatusCode == 404 &&
+      //      !Path.HasExtension(context.Request.Path.Value) &&
+      //      !context.Request.Path.Value.StartsWith("/api/"))
+      //  {
+      //    context.Request.Path = "/index.html";
+      //    await next();
+      //  }
       //});
+
+      if (env.IsDevelopment())
+      {
+        app.UseDeveloperExceptionPage();
+        app.UseBrowserLink();
+        app.UseDatabaseErrorPage();
+      }
+      else
+      {
+        app.UseExceptionHandler("/Home/Error");
+      }
+
+      app.UseStaticFiles();
+
+      app.UseAuthentication();
+
+      app.UseMvc(routes =>
+      {
+        routes.MapRoute(
+            name: "default",
+            template: "{controller=Home}/{action=Index}/{id?}");
+      });
     }
   }
 }

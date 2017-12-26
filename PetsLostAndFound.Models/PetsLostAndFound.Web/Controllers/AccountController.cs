@@ -1,24 +1,21 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security.Claims;
-using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authentication;
-using Microsoft.AspNetCore.Authorization;
-using Microsoft.AspNetCore.Identity;
-using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
-using Microsoft.Extensions.Logging;
-using Microsoft.Extensions.Options;
-using PetsLostAndFound.Web.Models;
-using PetsLostAndFound.Web.Models.AccountViewModels;
-using PetsLostAndFound.Web.Services;
-
 namespace PetsLostAndFound.Web.Controllers
 {
+  using Microsoft.AspNetCore.Authentication;
+  using Microsoft.AspNetCore.Authorization;
+  using Microsoft.AspNetCore.Identity;
+  using Microsoft.AspNetCore.Mvc;
+  using Microsoft.Extensions.Logging;
+  using PetsLostAndFound.Web.Models;
+  using PetsLostAndFound.Web.Models.AccountViewModels;
+  using PetsLostAndFound.Web.Services;
+  using System;
+  using System.Security.Claims;
+  using System.Threading.Tasks;
+
+
     [Authorize]
-    [Route("[controller]/[action]")]
-    public class AccountController : Controller
+  [Route("api/[controller]")]
+  public class AccountController : Controller
     {
         private readonly UserManager<ApplicationUser> _userManager;
         private readonly SignInManager<ApplicationUser> _signInManager;
@@ -209,13 +206,13 @@ namespace PetsLostAndFound.Web.Controllers
         public IActionResult Register(string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
-            return View();
+            return Ok();
         }
 
         [HttpPost]
         [AllowAnonymous]
         [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register(RegisterViewModel model, string returnUrl = null)
+        public async Task<IActionResult> Register([FromBody]RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
@@ -238,7 +235,7 @@ namespace PetsLostAndFound.Web.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return Ok(model);
         }
 
         [HttpPost]
