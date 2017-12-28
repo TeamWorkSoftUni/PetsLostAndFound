@@ -2,7 +2,8 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Data.Models;
+    using Models;
+
     public class PetConfiguration:IEntityTypeConfiguration<Pet>
     {
         public void Configure(EntityTypeBuilder<Pet> builder)

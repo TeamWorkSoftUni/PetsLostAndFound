@@ -2,7 +2,7 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Data.Models;
+    using Models;
 
     public class CommentConfiguration:IEntityTypeConfiguration<Comment>
     {
@@ -14,7 +14,8 @@
 
             builder.HasOne(e => e.User)
                 .WithMany(u => u.Comments)
-                .HasForeignKey(e => e.UserId);
+                .HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(e => e.Post)
                 .WithMany(p => p.Comments)

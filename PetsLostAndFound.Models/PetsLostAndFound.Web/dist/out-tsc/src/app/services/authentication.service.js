@@ -18,7 +18,7 @@ var RegisterUrl = constants_1.Constants.hostUrl + 'api/register';
 var LoginUrl = constants_1.Constants.hostUrl + 'api/login';
 var LogoutUrl = constants_1.Constants.hostUrl + 'api/logout';
 var AuthToken = constants_1.Constants.authTokent;
-var AuthenticationService = /** @class */ (function () {
+var AuthenticationService = (function () {
     function AuthenticationService(http, httpHedersService) {
         this.http = http;
         this.httpHedersService = httpHedersService;
@@ -56,12 +56,12 @@ var AuthenticationService = /** @class */ (function () {
         this.loggedIn = false;
         return this.http.get(LogoutUrl, { withCredentials: true });
     };
-    AuthenticationService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http,
-            http_headers_service_1.HttpHeadersService])
-    ], AuthenticationService);
     return AuthenticationService;
 }());
+AuthenticationService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http,
+        http_headers_service_1.HttpHeadersService])
+], AuthenticationService);
 exports.AuthenticationService = AuthenticationService;
 //# sourceMappingURL=authentication.service.js.map

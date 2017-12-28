@@ -7,19 +7,19 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var HeaderComponent = /** @class */ (function () {
+var HeaderComponent = (function () {
     function HeaderComponent() {
     }
     HeaderComponent.prototype.ngOnInit = function () {
     };
-    HeaderComponent = __decorate([
-        core_1.Component({
-            selector: 'app-header',
-            templateUrl: './header.component.html',
-            styleUrls: ['./header.component.css']
-        })
-    ], HeaderComponent);
     return HeaderComponent;
 }());
+HeaderComponent = __decorate([
+    core_1.Component({
+        selector: 'app-header',
+        templateUrl: './header.component.html',
+        styleUrls: ['./header.component.css']
+    })
+], HeaderComponent);
 exports.HeaderComponent = HeaderComponent;
 //# sourceMappingURL=header.component.js.map

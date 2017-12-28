@@ -2,6 +2,7 @@
 {
     using System.Device.Location;
     using System.Collections.Generic;
+    using System.ComponentModel.DataAnnotations.Schema;
 
     public class Location
     {
@@ -11,7 +12,8 @@
         }
 
         public int Id { get; set; }
-
+        
+        [NotMapped]
         public GeoCoordinate GeoCoordinate { get; set; }
 
         public string Town { get; set; }

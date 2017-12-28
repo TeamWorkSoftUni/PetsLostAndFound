@@ -10,11 +10,13 @@
         [MaxLength(255)]
         public string Content { get; set; }
 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
+
         [Required]
         public User User { get; set; }
         
         public int PostId { get; set; }
+
         [Required]
         public Report Post { get; set; }
 

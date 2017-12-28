@@ -16,7 +16,7 @@ var authentication_service_1 = require("../../../services/authentication.service
 var user_service_1 = require("../../../services/user.service");
 var constants_1 = require("../../../constants/constants");
 var AuthToken = constants_1.Constants.authTokent;
-var LoginComponent = /** @class */ (function () {
+var LoginComponent = (function () {
     function LoginComponent(fb, _authService, _router, userService) {
         this.fb = fb;
         this._authService = _authService;
@@ -57,18 +57,18 @@ var LoginComponent = /** @class */ (function () {
         //     });
         this._router.navigate(['/home']);
     };
-    LoginComponent = __decorate([
-        core_1.Component({
-            selector: 'app-login',
-            templateUrl: './login.component.html',
-            styleUrls: ['./login.component.css']
-        }),
-        __metadata("design:paramtypes", [forms_1.FormBuilder,
-            authentication_service_1.AuthenticationService,
-            router_1.Router,
-            user_service_1.UserService])
-    ], LoginComponent);
     return LoginComponent;
 }());
+LoginComponent = __decorate([
+    core_1.Component({
+        selector: 'app-login',
+        templateUrl: './login.component.html',
+        styleUrls: ['./login.component.css']
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder,
+        authentication_service_1.AuthenticationService,
+        router_1.Router,
+        user_service_1.UserService])
+], LoginComponent);
 exports.LoginComponent = LoginComponent;
 //# sourceMappingURL=login.component.js.map

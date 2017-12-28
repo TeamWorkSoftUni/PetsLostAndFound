@@ -13,7 +13,7 @@ var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var report_service_1 = require("../../../services/report.service");
 var router_1 = require("@angular/router");
-var ReportFormComponent = /** @class */ (function () {
+var ReportFormComponent = (function () {
     function ReportFormComponent(fb, reportService, router) {
         this.fb = fb;
         this.reportService = reportService;
@@ -23,8 +23,10 @@ var ReportFormComponent = /** @class */ (function () {
         this.hasImages = false;
         this.hasLocation = false;
         this.hasPet = false;
+        this.currentDate = new Date(Date.now());
     }
     ReportFormComponent.prototype.ngOnInit = function () {
+        this.currentDateAsString = this.currentDate.toISOString().substring(0, 10);
         this.reportToRegister = this.fb.group({
             'statusType': ['', forms_1.Validators.required],
             'lostFoundDate': ['', forms_1.Validators.required],
@@ -82,17 +84,17 @@ var ReportFormComponent = /** @class */ (function () {
         //     });
         this.router.navigate(['/home']);
     };
-    ReportFormComponent = __decorate([
-        core_1.Component({
-            selector: 'app-report-form',
-            templateUrl: './report-form.component.html',
-            styleUrls: ['./report-form.component.css']
-        }),
-        __metadata("design:paramtypes", [forms_1.FormBuilder,
-            report_service_1.ReportService,
-            router_1.Router])
-    ], ReportFormComponent);
     return ReportFormComponent;
 }());
+ReportFormComponent = __decorate([
+    core_1.Component({
+        selector: 'app-report-form',
+        templateUrl: './report-form.component.html',
+        styleUrls: ['./report-form.component.css']
+    }),
+    __metadata("design:paramtypes", [forms_1.FormBuilder,
+        report_service_1.ReportService,
+        router_1.Router])
+], ReportFormComponent);
 exports.ReportFormComponent = ReportFormComponent;
 //# sourceMappingURL=report-form.component.js.map

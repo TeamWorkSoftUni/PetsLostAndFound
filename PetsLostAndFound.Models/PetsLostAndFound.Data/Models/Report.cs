@@ -19,7 +19,7 @@
         public StatusType Status { get; set; }
 
         // Connection with the author 
-        public int UserId { get; set; }
+        public string UserId { get; set; }
 
         [Required]
         public User User { get; set; }
@@ -36,7 +36,7 @@
         /// A place to store the images for the given post 
         /// Maybe use a diffrent way to store them 
         /// </summary>
-        public string[] ImagesLinksPost { get; set; }
+        public string ImagesLinksPost { get; set; }
 
         /// <summary>
         /// A field where a user can decide if they want to give money to the one who finds it 
@@ -44,6 +44,7 @@
         public double? RewardSum { get; set; }
 
         public int PetId { get; set; }
+
         public Pet Pet { get; set; }
 
         /// <summary>
@@ -52,6 +53,7 @@
         public string Content { get; set; }
 
         public int LocationId { get; set; }
+
         [Required]
         public Location Location { get; set; }
     }

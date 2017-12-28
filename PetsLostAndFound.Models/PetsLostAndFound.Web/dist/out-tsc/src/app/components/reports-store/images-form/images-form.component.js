@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ng2_cloudinary_1 = require("ng2-cloudinary");
-var ImagesFormComponent = /** @class */ (function () {
+var ImagesFormComponent = (function () {
     function ImagesFormComponent() {
         var _this = this;
         this.uploadedImagesId = new core_1.EventEmitter();
@@ -27,6 +27,7 @@ var ImagesFormComponent = /** @class */ (function () {
                 _this.imagesId.push(res.public_id);
             }
             _this.uploadedImagesId.emit(_this.imagesId);
+            console.log(_this.imagesId);
             return { item: item, response: response, status: status, headers: headers };
         };
     }
@@ -37,19 +38,19 @@ var ImagesFormComponent = /** @class */ (function () {
     };
     ImagesFormComponent.prototype.ngOnInit = function () {
     };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], ImagesFormComponent.prototype, "uploadedImagesId", void 0);
-    ImagesFormComponent = __decorate([
-        core_1.Component({
-            selector: 'app-images-form',
-            templateUrl: './images-form.component.html',
-            styleUrls: ['./images-form.component.css']
-        }),
-        __metadata("design:paramtypes", [])
-    ], ImagesFormComponent);
     return ImagesFormComponent;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], ImagesFormComponent.prototype, "uploadedImagesId", void 0);
+ImagesFormComponent = __decorate([
+    core_1.Component({
+        selector: 'app-images-form',
+        templateUrl: './images-form.component.html',
+        styleUrls: ['./images-form.component.css']
+    }),
+    __metadata("design:paramtypes", [])
+], ImagesFormComponent);
 exports.ImagesFormComponent = ImagesFormComponent;
 //# sourceMappingURL=images-form.component.js.map

@@ -13,6 +13,7 @@ var reports_component_1 = require("./reports/reports.component");
 var report_form_component_1 = require("./report-form/report-form.component");
 var images_form_component_1 = require("./images-form/images-form.component");
 var pet_form_component_1 = require("./pet-form/pet-form.component");
+var register_component_1 = require("../../components/authentication/register/register.component");
 // Modules
 var common_1 = require("@angular/common");
 var forms_1 = require("@angular/forms");
@@ -23,41 +24,42 @@ var ng2_cloudinary_1 = require("ng2-cloudinary");
 var ng2_file_upload_1 = require("ng2-file-upload");
 // Services
 var report_service_1 = require("../../services/report.service");
-var ReportsModule = /** @class */ (function () {
+var ReportsModule = (function () {
     function ReportsModule() {
     }
-    ReportsModule = __decorate([
-        core_1.NgModule({
-            declarations: [
-                reports_component_1.ReportsComponent,
-                location_form_component_1.LocationFormComponent,
-                report_form_component_1.ReportFormComponent,
-                images_form_component_1.ImagesFormComponent,
-                pet_form_component_1.PetFormComponent,
-            ],
-            imports: [
-                common_1.CommonModule,
-                forms_1.FormsModule,
-                forms_1.ReactiveFormsModule,
-                http_1.HttpClientModule,
-                app_routing_module_1.AppRoutingModule,
-                core_2.AgmCoreModule.forRoot({
-                    apiKey: 'AIzaSyBEFONV9Qm5seghvVJomqOmmXY5fHqxcDY',
-                    libraries: ["places"]
-                }),
-                platform_browser_1.BrowserModule,
-                ng2_cloudinary_1.Ng2CloudinaryModule,
-                ng2_file_upload_1.FileUploadModule
-            ],
-            exports: [
-                reports_component_1.ReportsComponent,
-            ],
-            providers: [
-                report_service_1.ReportService
-            ]
-        })
-    ], ReportsModule);
     return ReportsModule;
 }());
+ReportsModule = __decorate([
+    core_1.NgModule({
+        declarations: [
+            reports_component_1.ReportsComponent,
+            location_form_component_1.LocationFormComponent,
+            report_form_component_1.ReportFormComponent,
+            images_form_component_1.ImagesFormComponent,
+            pet_form_component_1.PetFormComponent,
+            register_component_1.RegisterComponent
+        ],
+        imports: [
+            common_1.CommonModule,
+            forms_1.FormsModule,
+            forms_1.ReactiveFormsModule,
+            http_1.HttpClientModule,
+            app_routing_module_1.AppRoutingModule,
+            core_2.AgmCoreModule.forRoot({
+                apiKey: 'AIzaSyBEFONV9Qm5seghvVJomqOmmXY5fHqxcDY',
+                libraries: ["places"]
+            }),
+            platform_browser_1.BrowserModule,
+            ng2_cloudinary_1.Ng2CloudinaryModule,
+            ng2_file_upload_1.FileUploadModule
+        ],
+        exports: [
+            reports_component_1.ReportsComponent,
+        ],
+        providers: [
+            report_service_1.ReportService
+        ]
+    })
+], ReportsModule);
 exports.ReportsModule = ReportsModule;
 //# sourceMappingURL=reports.module.js.map

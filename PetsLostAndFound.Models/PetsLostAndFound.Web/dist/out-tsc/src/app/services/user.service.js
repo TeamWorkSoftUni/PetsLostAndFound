@@ -17,7 +17,7 @@ var UserByIdUrl = constants_1.Constants.hostUrl + 'api/users/user/';
 var GetLoggedUserUrl = constants_1.Constants.hostUrl + 'api/auth/getLoggedUser';
 var GetUsersUrl = constants_1.Constants.hostUrl + 'api/users';
 var AuthToken = constants_1.Constants.authTokent;
-var UserService = /** @class */ (function () {
+var UserService = (function () {
     function UserService(http) {
         this.http = http;
     }
@@ -57,11 +57,11 @@ var UserService = /** @class */ (function () {
             return false;
         });
     };
-    UserService = __decorate([
-        core_1.Injectable(),
-        __metadata("design:paramtypes", [http_1.Http])
-    ], UserService);
     return UserService;
 }());
+UserService = __decorate([
+    core_1.Injectable(),
+    __metadata("design:paramtypes", [http_1.Http])
+], UserService);
 exports.UserService = UserService;
 //# sourceMappingURL=user.service.js.map

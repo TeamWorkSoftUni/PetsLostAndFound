@@ -2,7 +2,8 @@
 {
     using Microsoft.EntityFrameworkCore;
     using Microsoft.EntityFrameworkCore.Metadata.Builders;
-    using Data.Models;
+    using Models;
+
     public class ReportConfiguration:IEntityTypeConfiguration<Report>
     {
         public void Configure(EntityTypeBuilder<Report> builder)
@@ -13,7 +14,8 @@
 
             builder.HasOne(e => e.User)
                 .WithMany(u => u.Reports)
-                .HasForeignKey(e => e.UserId);
+                .HasForeignKey(e => e.UserId)
+                .OnDelete(DeleteBehavior.Restrict);
 
             builder.HasOne(e => e.Pet)
                 .WithMany(p => p.Reports)

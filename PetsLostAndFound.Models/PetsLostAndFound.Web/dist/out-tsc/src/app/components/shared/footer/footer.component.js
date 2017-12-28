@@ -10,20 +10,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var FooterComponent = /** @class */ (function () {
+var FooterComponent = (function () {
     function FooterComponent() {
     }
     FooterComponent.prototype.ngOnInit = function () {
     };
-    FooterComponent = __decorate([
-        core_1.Component({
-            selector: 'app-footer',
-            templateUrl: './footer.component.html',
-            styleUrls: ['./footer.component.css']
-        }),
-        __metadata("design:paramtypes", [])
-    ], FooterComponent);
     return FooterComponent;
 }());
+FooterComponent = __decorate([
+    core_1.Component({
+        selector: 'app-footer',
+        templateUrl: './footer.component.html',
+        styleUrls: ['./footer.component.css']
+    }),
+    __metadata("design:paramtypes", [])
+], FooterComponent);
 exports.FooterComponent = FooterComponent;
 //# sourceMappingURL=footer.component.js.map

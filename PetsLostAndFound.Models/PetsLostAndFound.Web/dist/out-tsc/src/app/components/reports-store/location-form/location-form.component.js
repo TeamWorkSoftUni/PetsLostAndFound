@@ -12,7 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var forms_1 = require("@angular/forms");
 var core_2 = require("@agm/core");
-var LocationFormComponent = /** @class */ (function () {
+var LocationFormComponent = (function () {
     function LocationFormComponent(mapsAPILoader, ngZone) {
         this.mapsAPILoader = mapsAPILoader;
         this.ngZone = ngZone;
@@ -38,7 +38,8 @@ var LocationFormComponent = /** @class */ (function () {
                 _this.ngZone.run(function () {
                     //get the place result
                     var place = autocomplete.getPlace();
-                    console.log(place);
+                    _this.locationName = place.formatted_address;
+                    //console.log(place)
                     //verify result
                     if (place.geometry === undefined || place.geometry === null) {
                         return;
@@ -65,6 +66,7 @@ var LocationFormComponent = /** @class */ (function () {
         this.latitude = event.lat;
         this.longitude = event.lng;
         this.selectedLocation.emit({
+            locationAdress: this.locationName,
             latitude: this.latitude,
             longitude: this.longitude
         });
@@ -77,24 +79,24 @@ var LocationFormComponent = /** @class */ (function () {
             this.mapType = 'terrain';
         }
     };
-    __decorate([
-        core_1.Output(),
-        __metadata("design:type", Object)
-    ], LocationFormComponent.prototype, "selectedLocation", void 0);
-    __decorate([
-        core_1.ViewChild("search"),
-        __metadata("design:type", core_1.ElementRef)
-    ], LocationFormComponent.prototype, "searchElementRef", void 0);
-    LocationFormComponent = __decorate([
-        core_1.Component({
-            selector: 'app-location-form',
-            templateUrl: './location-form.component.html',
-            styleUrls: ['./location-form.component.css']
-        }),
-        __metadata("design:paramtypes", [core_2.MapsAPILoader,
-            core_1.NgZone])
-    ], LocationFormComponent);
     return LocationFormComponent;
 }());
+__decorate([
+    core_1.Output(),
+    __metadata("design:type", Object)
+], LocationFormComponent.prototype, "selectedLocation", void 0);
+__decorate([
+    core_1.ViewChild("search"),
+    __metadata("design:type", core_1.ElementRef)
+], LocationFormComponent.prototype, "searchElementRef", void 0);
+LocationFormComponent = __decorate([
+    core_1.Component({
+        selector: 'app-location-form',
+        templateUrl: './location-form.component.html',
+        styleUrls: ['./location-form.component.css']
+    }),
+    __metadata("design:paramtypes", [core_2.MapsAPILoader,
+        core_1.NgZone])
+], LocationFormComponent);
 exports.LocationFormComponent = LocationFormComponent;
 //# sourceMappingURL=location-form.component.js.map

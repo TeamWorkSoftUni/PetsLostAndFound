@@ -1,10 +1,10 @@
 ﻿namespace PetsLostAndFound.Data.Models
 {
+    using Microsoft.AspNetCore.Identity;
+    using Models.Enums;
     using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
-    using Data.Models.Enums;
 
-    public class User
+    public class User : IdentityUser
     {
         public User()
         {
@@ -12,24 +12,6 @@
             this.Comments = new List<Comment>();
             this.Pets = new List<Pet>();
         }
-
-        public int Id { get; set; }
-
-        /// <summary>
-        /// Ginko Grudev: Started addign the barebones decided to use class libraries so it's easier to use it
-        /// </summary>
-        [Required]
-        public string Username { get; set; }
-
-        [Required]
-        public string Email { get; set; }
-
-        // No idea how to store this
-        [Required]
-        public string Password { get; set; }
-
-        [Required]
-        public string TelephoneNumber { get; set; }
 
         // The town from which the user is from
         public string TownName { get; set; }
