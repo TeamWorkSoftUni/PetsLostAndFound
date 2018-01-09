@@ -15,7 +15,7 @@ var http_headers_service_1 = require("./http-headers.service");
 require("rxjs/add/operator/map");
 var constants_1 = require("../constants/constants");
 var RegisterUrl = constants_1.Constants.hostUrl + 'api/report';
-var ReportService = (function () {
+var ReportService = /** @class */ (function () {
     function ReportService(http, httpHedersService) {
         this.http = http;
         this.httpHedersService = httpHedersService;
@@ -31,12 +31,12 @@ var ReportService = (function () {
             };
         });
     };
+    ReportService = __decorate([
+        core_1.Injectable(),
+        __metadata("design:paramtypes", [http_1.Http,
+            http_headers_service_1.HttpHeadersService])
+    ], ReportService);
     return ReportService;
 }());
-ReportService = __decorate([
-    core_1.Injectable(),
-    __metadata("design:paramtypes", [http_1.Http,
-        http_headers_service_1.HttpHeadersService])
-], ReportService);
 exports.ReportService = ReportService;
 //# sourceMappingURL=report.service.js.map

@@ -4,7 +4,7 @@ namespace PetsLostAndFound.Web.Controllers
   using PetsLostAndFound.Web.Models;
   using System.Diagnostics;
 
-  [Route("api/[controller]")]
+  [Route("[controller]/[action]")]
   public class HomeController : Controller
   {
     [HttpGet]
@@ -17,14 +17,14 @@ namespace PetsLostAndFound.Web.Controllers
     {
       ViewData["Message"] = "Your application description page.";
 
-      return View();
+      return Ok();
     }
 
     public IActionResult Contact()
     {
       ViewData["Message"] = "Your contact page.";
 
-      return View();
+      return Ok();
     }
 
     public IActionResult Error()

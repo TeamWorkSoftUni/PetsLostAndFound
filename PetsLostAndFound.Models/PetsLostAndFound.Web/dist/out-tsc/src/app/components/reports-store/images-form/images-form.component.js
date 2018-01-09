@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var ng2_cloudinary_1 = require("ng2-cloudinary");
-var ImagesFormComponent = (function () {
+var ImagesFormComponent = /** @class */ (function () {
     function ImagesFormComponent() {
         var _this = this;
         this.uploadedImagesId = new core_1.EventEmitter();
@@ -38,19 +38,19 @@ var ImagesFormComponent = (function () {
     };
     ImagesFormComponent.prototype.ngOnInit = function () {
     };
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], ImagesFormComponent.prototype, "uploadedImagesId", void 0);
+    ImagesFormComponent = __decorate([
+        core_1.Component({
+            selector: 'app-images-form',
+            templateUrl: './images-form.component.html',
+            styleUrls: ['./images-form.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], ImagesFormComponent);
     return ImagesFormComponent;
 }());
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], ImagesFormComponent.prototype, "uploadedImagesId", void 0);
-ImagesFormComponent = __decorate([
-    core_1.Component({
-        selector: 'app-images-form',
-        templateUrl: './images-form.component.html',
-        styleUrls: ['./images-form.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], ImagesFormComponent);
 exports.ImagesFormComponent = ImagesFormComponent;
 //# sourceMappingURL=images-form.component.js.map

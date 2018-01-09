@@ -11,7 +11,7 @@
           "lib/netstandard1.0/_._": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "type": "package",
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
@@ -30,7 +30,7 @@
   },
   "libraries": {
     "Microsoft.NETCore.Platforms/1.1.0": {
-      "sha512": "kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "xfqcMKokHFTdMPPIl+/GbWZoP+mGadIWhVsb5PktDQKFQle8r/azV46Gsbe//BtZbSFUIk5ocPLsDpIQH/iyug==",
       "type": "package",
       "path": "microsoft.netcore.platforms/1.1.0",
       "files": [
@@ -42,10 +42,10 @@
         "runtime.json"
       ]
     },
-    "NETStandard.Library/2.0.0": {
-      "sha512": "7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
+    "NETStandard.Library/2.0.1": {
+      "sha512": "oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
       "type": "package",
-      "path": "netstandard.library/2.0.0",
+      "path": "netstandard.library/2.0.1",
       "files": [
         "LICENSE.TXT",
         "THIRD-PARTY-NOTICES.TXT",
@@ -166,18 +166,18 @@
         "build/netstandard2.0/ref/netstandard.dll",
         "build/netstandard2.0/ref/netstandard.xml",
         "lib/netstandard1.0/_._",
-        "netstandard.library.2.0.0.nupkg.sha512",
+        "netstandard.library.2.0.1.nupkg.sha512",
         "netstandard.library.nuspec"
       ]
     }
   },
   "projectFileDependencyGroups": {
     ".NETStandard,Version=v2.0": [
-      "NETStandard.Library >= 2.0.0"
+      "NETStandard.Library >= 2.0.1"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Alien\\.nuget\\packages\\": {},
+    "C:\\Users\\Dimito\\.nuget\\packages\\": {},
     "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
@@ -186,17 +186,17 @@
       "hideWarningsAndErrors": true
     },
     "restore": {
-      "projectUniqueName": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj",
+      "projectUniqueName": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj",
       "projectName": "PetsLostAndFound.Services",
-      "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj",
-      "packagesPath": "C:\\Users\\Alien\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\obj\\",
+      "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj",
+      "packagesPath": "C:\\Users\\Dimito\\.nuget\\packages\\",
+      "outputPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Alien\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Dimito\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -223,7 +223,7 @@
           "NETStandard.Library": {
             "suppressParent": "All",
             "target": "Package",
-            "version": "2.0.0",
+            "version": "[2.0.1, )",
             "autoReferenced": true
           }
         },

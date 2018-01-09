@@ -11,7 +11,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var AppComponent = (function () {
+var AppComponent = /** @class */ (function () {
     function AppComponent(_httpService) {
         this._httpService = _httpService;
         this.apiValues = [];
@@ -22,16 +22,16 @@ var AppComponent = (function () {
             _this.apiValues = values.json();
         });
     };
+    AppComponent = __decorate([
+        core_1.Component({
+            selector: 'app-root',
+            templateUrl: './app.component.html',
+            styleUrls: ['./app.component.css']
+        }),
+        __metadata("design:paramtypes", [http_1.Http])
+    ], AppComponent);
     return AppComponent;
 }());
-AppComponent = __decorate([
-    core_1.Component({
-        selector: 'app-root',
-        templateUrl: './app.component.html',
-        styleUrls: ['./app.component.css']
-    }),
-    __metadata("design:paramtypes", [http_1.Http])
-], AppComponent);
 exports.AppComponent = AppComponent;
 //import { Component } from '@angular/core';
 //import { Router, NavigationEnd } from '@angular/router';

@@ -8,7 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
 var http_1 = require("@angular/http");
-var HttpHeadersService = (function () {
+var HttpHeadersService = /** @class */ (function () {
     function HttpHeadersService() {
     }
     HttpHeadersService.prototype.getHeaders = function (token) {
@@ -21,10 +21,10 @@ var HttpHeadersService = (function () {
         var options = new http_1.RequestOptions({ headers: headers });
         return options;
     };
+    HttpHeadersService = __decorate([
+        core_1.Injectable()
+    ], HttpHeadersService);
     return HttpHeadersService;
 }());
-HttpHeadersService = __decorate([
-    core_1.Injectable()
-], HttpHeadersService);
 exports.HttpHeadersService = HttpHeadersService;
 //# sourceMappingURL=http-headers.service.js.map

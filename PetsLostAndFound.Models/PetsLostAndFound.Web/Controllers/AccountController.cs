@@ -14,7 +14,7 @@ namespace PetsLostAndFound.Web.Controllers
 
 
   [Authorize]
-  [Route("api/[controller]")]
+  [Route("[controller]/[action]")]
   public class AccountController : Controller
     {
         private readonly UserManager<User> _userManager;
@@ -45,13 +45,13 @@ namespace PetsLostAndFound.Web.Controllers
             await HttpContext.SignOutAsync(IdentityConstants.ExternalScheme);
 
             ViewData["ReturnUrl"] = returnUrl;
-            return View();
+            return Ok();
         }
 
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Login(LoginViewModel model, string returnUrl = null)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Login([FromBody]LoginViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
@@ -81,7 +81,7 @@ namespace PetsLostAndFound.Web.Controllers
             }
 
             // If we got this far, something failed, redisplay form
-            return View(model);
+            return Ok(model);
         }
 
         [HttpGet]
@@ -211,13 +211,20 @@ namespace PetsLostAndFound.Web.Controllers
 
         [HttpPost]
         [AllowAnonymous]
-        [ValidateAntiForgeryToken]
-        public async Task<IActionResult> Register([FromBody]RegisterViewModel model, string returnUrl = null)
+        //[ValidateAntiForgeryToken]
+        public async Task<IActionResult> Register([FromForm]RegisterViewModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;
             if (ModelState.IsValid)
             {
-                var user = new User { UserName = model.Email, Email = model.Email };
+                var user = new User
+                {
+                    UserName = model.Email,
+                    Email = model.Email,
+                    PhoneNumber = model.telephoneNumber,
+                    TownName = model.locationName,
+                    Image = model.userImagesId
+                };
                 var result = await _userManager.CreateAsync(user, model.Password);
                 if (result.Succeeded)
                 {
@@ -239,12 +246,12 @@ namespace PetsLostAndFound.Web.Controllers
         }
 
         [HttpPost]
-        [ValidateAntiForgeryToken]
+        //[ValidateAntiForgeryToken]
         public async Task<IActionResult> Logout()
         {
             await _signInManager.SignOutAsync();
             _logger.LogInformation("User logged out.");
-            return RedirectToAction(nameof(HomeController.Index), "Home");
+            return Ok();
         }
 
         [HttpPost]
@@ -431,7 +438,7 @@ namespace PetsLostAndFound.Web.Controllers
         [HttpGet]
         public IActionResult AccessDenied()
         {
-            return View();
+            return Ok();
         }
 
         #region Helpers

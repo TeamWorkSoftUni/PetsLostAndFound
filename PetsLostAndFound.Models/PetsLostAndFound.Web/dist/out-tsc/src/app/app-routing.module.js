@@ -21,20 +21,20 @@ var routes = [
     { path: 'reports', component: reports_component_1.ReportsComponent },
     { path: 'report-form', component: report_form_component_1.ReportFormComponent }
 ];
-var AppRoutingModule = (function () {
+var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
     }
+    AppRoutingModule = __decorate([
+        core_1.NgModule({
+            imports: [
+                router_1.RouterModule.forRoot(routes)
+            ],
+            exports: [
+                router_1.RouterModule
+            ]
+        })
+    ], AppRoutingModule);
     return AppRoutingModule;
 }());
-AppRoutingModule = __decorate([
-    core_1.NgModule({
-        imports: [
-            router_1.RouterModule.forRoot(routes)
-        ],
-        exports: [
-            router_1.RouterModule
-        ]
-    })
-], AppRoutingModule);
 exports.AppRoutingModule = AppRoutingModule;
 //# sourceMappingURL=app-routing.module.js.map
