@@ -14,7 +14,7 @@ var forms_1 = require("@angular/forms");
 var authentication_service_1 = require("../../../services/authentication.service");
 var router_1 = require("@angular/router");
 var core_2 = require("@agm/core");
-var RegisterComponent = (function () {
+var RegisterComponent = /** @class */ (function () {
     function RegisterComponent(fb, authService, router, mapsAPILoader, ngZone) {
         this.fb = fb;
         this.authService = authService;
@@ -88,23 +88,23 @@ var RegisterComponent = (function () {
             });
         }
     };
+    __decorate([
+        core_1.ViewChild("search"),
+        __metadata("design:type", core_1.ElementRef)
+    ], RegisterComponent.prototype, "searchElementRef", void 0);
+    RegisterComponent = __decorate([
+        core_1.Component({
+            selector: 'app-register',
+            templateUrl: './register.component.html',
+            styleUrls: ['./register.component.css']
+        }),
+        __metadata("design:paramtypes", [forms_1.FormBuilder,
+            authentication_service_1.AuthenticationService,
+            router_1.Router,
+            core_2.MapsAPILoader,
+            core_1.NgZone])
+    ], RegisterComponent);
     return RegisterComponent;
 }());
-__decorate([
-    core_1.ViewChild("search"),
-    __metadata("design:type", core_1.ElementRef)
-], RegisterComponent.prototype, "searchElementRef", void 0);
-RegisterComponent = __decorate([
-    core_1.Component({
-        selector: 'app-register',
-        templateUrl: './register.component.html',
-        styleUrls: ['./register.component.css']
-    }),
-    __metadata("design:paramtypes", [forms_1.FormBuilder,
-        authentication_service_1.AuthenticationService,
-        router_1.Router,
-        core_2.MapsAPILoader,
-        core_1.NgZone])
-], RegisterComponent);
 exports.RegisterComponent = RegisterComponent;
 //# sourceMappingURL=register.component.js.map

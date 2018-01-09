@@ -1,7 +1,11 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
+<<<<<<< HEAD
     "signature": "40d45604b5ff736920570fece07f4e5a3515507e"
+=======
+    "signature": "2468f8819b4e290b1a8667020137de51bd83af19"
+>>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
   },
   "compilationOptions": {},
   "targets": {
@@ -9,9 +13,13 @@
     ".NETStandard,Version=v2.0/": {
       "PetsLostAndFound.Services/1.0.0": {
         "dependencies": {
+<<<<<<< HEAD
           "NETStandard.Library": "2.0.0",
           "PetsLostAndFound.Common": "1.0.0",
           "PetsLostAndFound.Db": "1.0.0"
+=======
+          "NETStandard.Library": "2.0.1"
+>>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
         },
         "runtime": {
           "PetsLostAndFound.Services.dll": {}
@@ -372,6 +380,7 @@
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},
+<<<<<<< HEAD
       "Microsoft.NETCore.Targets/1.1.0": {},
       "Microsoft.Win32.Registry/4.4.0": {
         "dependencies": {
@@ -383,6 +392,9 @@
         }
       },
       "NETStandard.Library/2.0.0": {
+=======
+      "NETStandard.Library/2.0.1": {
+>>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
@@ -1157,10 +1169,11 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "sha512-xfqcMKokHFTdMPPIl+/GbWZoP+mGadIWhVsb5PktDQKFQle8r/azV46Gsbe//BtZbSFUIk5ocPLsDpIQH/iyug==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
+<<<<<<< HEAD
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
       "serviceable": true,
@@ -1548,6 +1561,14 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+=======
+    "NETStandard.Library/2.0.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+      "path": "netstandard.library/2.0.1",
+      "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
+>>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
     }
   }
 }

@@ -10,7 +10,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 var core_1 = require("@angular/core");
-var PetFormComponent = (function () {
+var PetFormComponent = /** @class */ (function () {
     function PetFormComponent() {
         this.newPet = new core_1.EventEmitter();
         this.hasPetType = false;
@@ -39,27 +39,27 @@ var PetFormComponent = (function () {
     PetFormComponent.prototype.petFillData = function (event) {
         this.newPet.emit(this.model);
     };
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", String)
+    ], PetFormComponent.prototype, "statusType", void 0);
+    __decorate([
+        core_1.Input(),
+        __metadata("design:type", Boolean)
+    ], PetFormComponent.prototype, "isLost", void 0);
+    __decorate([
+        core_1.Output(),
+        __metadata("design:type", Object)
+    ], PetFormComponent.prototype, "newPet", void 0);
+    PetFormComponent = __decorate([
+        core_1.Component({
+            selector: 'app-pet-form',
+            templateUrl: './pet-form.component.html',
+            styleUrls: ['./pet-form.component.css']
+        }),
+        __metadata("design:paramtypes", [])
+    ], PetFormComponent);
     return PetFormComponent;
 }());
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", String)
-], PetFormComponent.prototype, "statusType", void 0);
-__decorate([
-    core_1.Input(),
-    __metadata("design:type", Boolean)
-], PetFormComponent.prototype, "isLost", void 0);
-__decorate([
-    core_1.Output(),
-    __metadata("design:type", Object)
-], PetFormComponent.prototype, "newPet", void 0);
-PetFormComponent = __decorate([
-    core_1.Component({
-        selector: 'app-pet-form',
-        templateUrl: './pet-form.component.html',
-        styleUrls: ['./pet-form.component.css']
-    }),
-    __metadata("design:paramtypes", [])
-], PetFormComponent);
 exports.PetFormComponent = PetFormComponent;
 //# sourceMappingURL=pet-form.component.js.map
