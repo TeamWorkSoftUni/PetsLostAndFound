@@ -88,7 +88,12 @@ namespace PetsLostAndFound.Web.Controllers
       ViewData["ReturnUrl"] = returnUrl;
       if (ModelState.IsValid)
       {
-        var user = new User { UserName = model.Username, Email = model.Email };
+        var user = new User
+        {
+            UserName = model.Username,
+            Email = model.Email,
+            PhoneNumber = model.TelephoneNumber
+        };
         var result = await this.userManager.CreateAsync(user, model.Password);
         if (result.Succeeded)
         {

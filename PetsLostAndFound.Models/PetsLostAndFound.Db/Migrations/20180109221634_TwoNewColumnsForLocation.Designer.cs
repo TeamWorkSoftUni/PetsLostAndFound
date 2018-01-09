@@ -12,9 +12,10 @@ using System;
 namespace PetsLostAndFound.Db.Migrations
 {
     [DbContext(typeof(PetsDbContext))]
-    partial class PetsDbContextModelSnapshot : ModelSnapshot
+    [Migration("20180109221634_TwoNewColumnsForLocation")]
+    partial class TwoNewColumnsForLocation
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
