@@ -3,11 +3,7 @@
   <PropertyGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
     <RestoreSuccess Condition=" '$(RestoreSuccess)' == '' ">True</RestoreSuccess>
     <RestoreTool Condition=" '$(RestoreTool)' == '' ">NuGet</RestoreTool>
-<<<<<<< HEAD:PetsLostAndFound.Models/Pets.LostAndFound.Common/obj/PetsLostAndFound.Common.csproj.nuget.g.props
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\project.assets.json</ProjectAssetsFile>
-=======
-    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Data\obj\project.assets.json</ProjectAssetsFile>
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/obj/PetsLostAndFound.Data.csproj.nuget.g.props
+    <ProjectAssetsFile Condition=" '$(ProjectAssetsFile)' == '' ">E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\project.assets.json</ProjectAssetsFile>
     <NuGetPackageRoot Condition=" '$(NuGetPackageRoot)' == '' ">$(UserProfile)\.nuget\packages\</NuGetPackageRoot>
     <NuGetPackageFolders Condition=" '$(NuGetPackageFolders)' == '' ">C:\Users\Dimito\.nuget\packages\;C:\Program Files\dotnet\sdk\NuGetFallbackFolder</NuGetPackageFolders>
     <NuGetProjectStyle Condition=" '$(NuGetProjectStyle)' == '' ">PackageReference</NuGetProjectStyle>

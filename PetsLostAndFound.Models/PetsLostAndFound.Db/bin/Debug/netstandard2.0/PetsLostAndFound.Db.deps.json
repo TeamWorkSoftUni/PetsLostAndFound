@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETStandard,Version=v2.0/",
-    "signature": "a506126b5419b2f01f3f18bb39b56961376e889f"
+    "signature": "2894401c36788ab79ada2de04c556a1eae8b2d7c"
   },
   "compilationOptions": {},
   "targets": {
@@ -12,7 +12,7 @@
           "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore": "2.0.1",
           "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "NETStandard.Library": "2.0.0"
+          "NETStandard.Library": "2.0.1"
         },
         "runtime": {
           "PetsLostAndFound.Db.dll": {}
@@ -365,7 +365,7 @@
           "lib/netstandard2.0/Microsoft.Win32.Registry.dll": {}
         }
       },
-      "NETStandard.Library/2.0.0": {
+      "NETStandard.Library/2.0.1": {
         "dependencies": {
           "Microsoft.NETCore.Platforms": "1.1.0"
         }
@@ -469,7 +469,7 @@
       },
       "System.Interactive.Async/3.1.1": {
         "dependencies": {
-          "NETStandard.Library": "2.0.0"
+          "NETStandard.Library": "2.0.1"
         },
         "runtime": {
           "lib/netstandard1.3/System.Interactive.Async.dll": {}
@@ -961,22 +961,16 @@
     "Microsoft.NETCore.Platforms/1.1.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-kz0PEW2lhqygehI/d6XsPCQzD7ff7gUJaVGPVETX611eadGsA3A877GdSlU0LRVMCTH/+P3o2iDTak+S08V2+A==",
+      "sha512": "sha512-xfqcMKokHFTdMPPIl+/GbWZoP+mGadIWhVsb5PktDQKFQle8r/azV46Gsbe//BtZbSFUIk5ocPLsDpIQH/iyug==",
       "path": "microsoft.netcore.platforms/1.1.0",
       "hashPath": "microsoft.netcore.platforms.1.1.0.nupkg.sha512"
     },
     "Microsoft.NETCore.Targets/1.1.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-aOZA3BWfz9RXjpzt0sRJJMjAscAUm3Hoa4UWAfceV9UTYxgwZ1lZt5nO2myFf+/jetYQo4uTP7zS8sJY67BBxg==",
+      "sha512": "sha512-LNZqnt5m0JftAL2xmXmA0ZJhgd8c0ytA+E/q5y2B2XgZPKb2AtrcXgAqa+v0vHuf4uNxt2dknm5G2/iqfm4oDg==",
       "path": "microsoft.netcore.targets/1.1.0",
       "hashPath": "microsoft.netcore.targets.1.1.0.nupkg.sha512"
-=======
-      "sha512": "sha512-MgvoXYx2irHoMuetIWpBOA+Zr7HIvsFjiDnUG1JEEbmQqa09r9orEBuygNTu/C8LKFQrjSHYpnfDk21GadvIWg==",
-      "path": "microsoft.netcore.targets/1.0.1",
-      "hashPath": "microsoft.netcore.targets.1.0.1.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "Microsoft.Win32.Registry/4.4.0": {
       "type": "package",
@@ -985,12 +979,12 @@
       "path": "microsoft.win32.registry/4.4.0",
       "hashPath": "microsoft.win32.registry.4.4.0.nupkg.sha512"
     },
-    "NETStandard.Library/2.0.0": {
+    "NETStandard.Library/2.0.1": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-7jnbRU+L08FXKMxqUflxEXtVymWvNOrS8yHgu9s6EM8Anr6T/wIX4nZ08j/u3Asz+tCufp3YVwFSEvFTPYmBPA==",
-      "path": "netstandard.library/2.0.0",
-      "hashPath": "netstandard.library.2.0.0.nupkg.sha512"
+      "sha512": "sha512-oA6nwv9MhEKYvLpjZ0ggSpb1g4CQViDVQjLUcDWg598jtvJbpfeP2reqwI1GLW2TbxC/Ml7xL6BBR1HmKPXlTg==",
+      "path": "netstandard.library/2.0.1",
+      "hashPath": "netstandard.library.2.0.1.nupkg.sha512"
     },
     "Remotion.Linq/2.1.1": {
       "type": "package",
@@ -1037,15 +1031,9 @@
     "System.Collections/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-3Dcj85/TBdVpL5Zr+gEEBUuFe2icOnLalmEh9hfck1PTYbbyWuZgh4fmm2ysCLTrqLQw6t3TgTyJ+VLp+Qb+Lw==",
+      "sha512": "sha512-qKc6TowAiKwq+8mtpl3k1OP34iLebOYcIf/s2arD9VJ5Nr2G50GPS6Iem7AZ99uzvCZ9Q6ON7lb1DFPTcfB97w==",
       "path": "system.collections/4.3.0",
       "hashPath": "system.collections.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-WQrUPrONiY/AIYUR5VDm+sHKdO4ayLhpPhSN3gRb4jR0GbfOspLfVuHiVX8WKF4tLpQBTvf9ZLbZHUKuqqQRPQ==",
-      "path": "system.collections/4.0.11",
-      "hashPath": "system.collections.4.0.11.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Collections.Immutable/1.4.0": {
       "type": "package",
@@ -1071,15 +1059,9 @@
     "System.Diagnostics.Debug/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-ZUhUOdqmaG5Jk3Xdb8xi5kIyQYAA4PnTNlHx1mu9ZY3qv4ELIdKbnL/akbGaKi2RnNUWaZsAs31rvzFdewTj2g==",
+      "sha512": "sha512-yxtDGTuWdiECmpE27V52Hrwa6VgFF0AlQ8VI/XYMInnJBgRGqekuk6r4bYDHTKON1uEtn1qEyAKe6JOuNQq3Ow==",
       "path": "system.diagnostics.debug/4.3.0",
       "hashPath": "system.diagnostics.debug.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-MYPXiCuwYZY7spjFDcR+36kNRNnz6J6wZdT0TFzgnGh2TioE0TzpcxY20RDkQgej/PSgRqYnqBl0e8YNzgNzfA==",
-      "path": "system.diagnostics.debug/4.0.11",
-      "hashPath": "system.diagnostics.debug.4.0.11.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Diagnostics.DiagnosticSource/4.4.1": {
       "type": "package",
@@ -1091,7 +1073,7 @@
     "System.Diagnostics.Tracing/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-rswfv0f/Cqkh78rA5S8eN8Neocz234+emGCtTF3lxPY96F+mmmUen6tbn0glN6PMvlKQb9bPAY5e9u7fgPTkKw==",
+      "sha512": "sha512-WIyX1Gkg51V+B1DQYsr9+XgCDChJafyxKDR5TwCYU0p0yrmLuwD3z+xzno+MluboEnBmvI+Va6oXWY5uEPQVLQ==",
       "path": "system.diagnostics.tracing/4.3.0",
       "hashPath": "system.diagnostics.tracing.4.3.0.nupkg.sha512"
     },
@@ -1112,15 +1094,9 @@
     "System.IO/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-3qjaHvxQPDpSOYICjUoTsmoq5u6QJAFRUITgeT/4gqkF1bajbSmb1kwSxEA8AHlofqgcKJcM8udgieRNhaJ5Cg==",
+      "sha512": "sha512-q8NbZvr4PfpYPT/s708QXENaSGknNVHZLggrwKxvspI9MuZ4D9VpqqcrdePiT0V8usP7hg8b7kJFuuBzMx50vw==",
       "path": "system.io/4.3.0",
       "hashPath": "system.io.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-byDSDvS8mf9c35FusT+Gh/BqIBYj0aKAlLg1WndDezWrwXj9SpdMgTw+e9O/lvHtnJsQ0uDSLEuEVnuTOEtnww==",
-      "path": "system.io/4.1.0",
-      "hashPath": "system.io.4.1.0.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Linq/4.1.0": {
       "type": "package",
@@ -1153,15 +1129,9 @@
     "System.Reflection/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-KMiAFoW7MfJGa9nDFNcfu+FpEdiHpWgTcS2HdMpDvt9saK3y/G4GwprPyzqjFH9NTaGPQeWNHU+iDlDILj96aQ==",
+      "sha512": "sha512-n4ZNCaG0MBduD0uWs8zmwiLUyU0pWqmKoydpxtpck/aDsDQ6CffoQeCq5bgHii+56VzIJQtYr9KT0t500qXBzg==",
       "path": "system.reflection/4.3.0",
       "hashPath": "system.reflection.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-xhOT+EL+ZbvvJdpIDek0Kge6V84gmimflhdDJJ+X5ZdZWvMpJdqX/hCv/YHYFcyft7N88eTBIzdB5ph72qGTBw==",
-      "path": "system.reflection/4.1.0",
-      "hashPath": "system.reflection.4.1.0.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Reflection.Emit/4.0.1": {
       "type": "package",
@@ -1194,15 +1164,9 @@
     "System.Reflection.Primitives/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-5RXItQz5As4xN2/YUDxdpsEkMhvw3e6aNveFXUn4Hl/udNTCNhnKp8lT9fnc3MhvGKh1baak5CovpuQUXHAlIA==",
+      "sha512": "sha512-PsDRpMl1zoy4xo5yehBa3BrM699nFfGsCs9pwJagTgq2cadb7ZMwmRjYyV4l1Mv/cHC0PYM2QZjQ6ekrq+2O7w==",
       "path": "system.reflection.primitives/4.3.0",
       "hashPath": "system.reflection.primitives.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-2zzfzeDS3EruV+46GcT4cxIpp9Pyc9Iof4femkD1OAEgVRkVTUlEJZRAEajS5/SdmYZfmWq41C0KkXyp8Gw0kA==",
-      "path": "system.reflection.primitives/4.0.1",
-      "hashPath": "system.reflection.primitives.4.0.1.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Reflection.TypeExtensions/4.1.0": {
       "type": "package",
@@ -1221,15 +1185,9 @@
     "System.Runtime/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-JufQi0vPQ0xGnAczR13AUFglDyVYt4Kqnz1AZaiKZ5+GICq0/1MH/mO/eAJHt/mHW1zjKBJd7kV26SrxddAhiw==",
+      "sha512": "sha512-1+ot9ZCILJW8B90AIaRAwu4rNX2UsRia4L40Yyb5pp3caTkbY5N+zauSaTkvoC3/1adgtd0cXkgfm+HDfw0aGw==",
       "path": "system.runtime/4.3.0",
       "hashPath": "system.runtime.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-UUCa4RucBlSVj3EaOQoT1DAHXQF0BMBTiBes92P+hlst56GFuCyVCoBl3PfI6UAPdGawJYG9rK2rIlL+5uw+LA==",
-      "path": "system.runtime/4.1.0",
-      "hashPath": "system.runtime.4.1.0.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Runtime.CompilerServices.Unsafe/4.4.0": {
       "type": "package",
@@ -1241,15 +1199,9 @@
     "System.Runtime.Extensions/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-guW0uK0fn5fcJJ1tJVXYd7/1h5F+pea1r7FLSOz/f8vPEqbR2ZAknuRDvTQ8PzAilDveOxNjSfr0CHfIQfFk8g==",
+      "sha512": "sha512-fPDCxGMeAsGCYeagozyiH+XpRTYrbRLplHM5B7Dlwg5aRwwRy6AbTeS6PQN/6pFJ3k1FzTJYXFjHj58rRhm6Aw==",
       "path": "system.runtime.extensions/4.3.0",
       "hashPath": "system.runtime.extensions.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-tkrUcoH9Ay8xjNvM4DnpW3tKq4AIdKq8v+p04FsPiu0N2pvXX+5fOXxoRiC+2HBLCTtuOPbM4l0f2Mk0GcpkaQ==",
-      "path": "system.runtime.extensions/4.1.0",
-      "hashPath": "system.runtime.extensions.4.1.0.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Security.AccessControl/4.4.0": {
       "type": "package",
@@ -1275,15 +1227,9 @@
     "System.Text.Encoding/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-BiIg+KWaSDOITze6jGQynxg64naAPtqGHBwDrLaCtixsa5bKiR8dpPOHA7ge3C0JJQizJE+sfkz1wV+BAKAYZw==",
+      "sha512": "sha512-iT3il7QFXLerKo5M2GU5KNXAjWuVuzOSBN35cXu4lp2oKhpU6sZzJNOgNozdP3eEfpYhTLR67kBjgRlIeqRSxw==",
       "path": "system.text.encoding/4.3.0",
       "hashPath": "system.text.encoding.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-mVNTlz0zyuholeeC72OqwNXgX9zUepHqD0c2QlUh169Qx+T4BG47CQpZg6Yk0YctZFkpjOUzTBlDQ409aH5TIw==",
-      "path": "system.text.encoding/4.0.11",
-      "hashPath": "system.text.encoding.4.0.11.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Text.Encoding.CodePages/4.4.0": {
       "type": "package",
@@ -1302,28 +1248,16 @@
     "System.Threading/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-VkUS0kOBcUf3Wwm0TSbrevDDZ6BlM+b/HRiapRFWjM5O0NS0LviG0glKmFK+hhPDd1XFeSdU1GmlLhb2CoVpIw==",
+      "sha512": "sha512-FGJNJDkprugtrsejJTvtNK+OXzJrPcI09Wl1I4xv3qAY9gN4JBovS6fiRz/xN3C+gFjs7QKWpao0JjR5YDhqQg==",
       "path": "system.threading/4.3.0",
       "hashPath": "system.threading.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-5E63KAu/+RcAJ0ZqHRBIwf0X8vZdcP66IX9vDBaX2CGg8KFggjANOsTotO2k86EJ4NAVxO1OXZfgrMECXXnk9Q==",
-      "path": "system.threading/4.0.11",
-      "hashPath": "system.threading.4.0.11.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     },
     "System.Threading.Tasks/4.3.0": {
       "type": "package",
       "serviceable": true,
-<<<<<<< HEAD:PetsLostAndFound.Models/PetsLostAndFound.Db/bin/Debug/netstandard2.0/PetsLostAndFound.Db.deps.json
-      "sha512": "sha512-LbSxKEdOUhVe8BezB/9uOGGppt+nZf6e1VFyw6v3DN6lqitm0OSn2uXMOdtP0M3W4iMcqcivm2J6UgqiwwnXiA==",
+      "sha512": "sha512-FXXNJfzxjd8+DgaHrhReEViBcn1m/3wsJU3dyBJrSFSrCWXM/rcyIoQjWDFjx5WBfFK3+7LaCBxNst6vxBLMbQ==",
       "path": "system.threading.tasks/4.3.0",
       "hashPath": "system.threading.tasks.4.3.0.nupkg.sha512"
-=======
-      "sha512": "sha512-bDHoVqc14/sniJuwaOTJuYpYszFgfGIzCwUkoHtJHzCPJWFWbPVbobDw6nHrwLvXKqaTfl7A5s6jNnbmGdQ7HA==",
-      "path": "system.threading.tasks/4.0.11",
-      "hashPath": "system.threading.tasks.4.0.11.nupkg.sha512"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff:PetsLostAndFound.Models/PetsLostAndFound.Data/bin/Debug/netcoreapp2.0/PetsLostAndFound.Data.deps.json
     }
   }
 }

@@ -10262,13 +10262,8 @@
         "system.linq.parallel.nuspec"
       ]
     },
-<<<<<<< HEAD
     "System.Linq.Queryable/4.3.0": {
-      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
-=======
-    "System.Linq.Queryable/4.0.1": {
-      "sha512": "fD1InPjqpoxfZfmSSTiDhxTviogGQMplTnQB5aVAc1g0XbeJBmefvIpHFUvx8hz1qDhebsUMF0h1jfGdD/XcUA==",
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
+      "sha512": "aZLVeZDjDhmCSzwSvuaQ4QrIE6VLPZroyQbN0DKBM4uVzCEI//Q6YrzOvFBMcyssqrcYTbL9dAVlwwE1XqreWA==",
       "type": "package",
       "path": "system.linq.queryable/4.3.0",
       "files": [
@@ -13259,16 +13254,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-<<<<<<< HEAD
-            "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj": {
-              "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj"
+            "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj": {
+              "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj"
             },
-            "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj": {
-              "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj"
-=======
-            "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Data\\PetsLostAndFound.Data.csproj": {
-              "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Data\\PetsLostAndFound.Data.csproj"
->>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
+            "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj": {
+              "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj"
             },
             "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj": {
               "projectPath": "E:\\01. SoftUni\\10. Practiacal work in team\\FINAL PROJECT\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj"

@@ -20,3 +20,7 @@ E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLo
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\obj\Debug\netstandard2.0\PetsLostAndFound.Services.AssemblyInfo.cs
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\obj\Debug\netstandard2.0\PetsLostAndFound.Services.dll
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\obj\Debug\netstandard2.0\PetsLostAndFound.Services.pdb
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\bin\Debug\netstandard2.0\PetsLostAndFound.Common.dll
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\bin\Debug\netstandard2.0\PetsLostAndFound.Db.dll
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\bin\Debug\netstandard2.0\PetsLostAndFound.Common.pdb
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Services\bin\Debug\netstandard2.0\PetsLostAndFound.Db.pdb

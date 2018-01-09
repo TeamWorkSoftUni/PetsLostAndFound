@@ -35,3 +35,7 @@ E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLo
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\obj\Debug\netcoreapp2.0\PetsLostAndFound.Web.dll
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\obj\Debug\netcoreapp2.0\PetsLostAndFound.Web.pdb
 >>>>>>> e56d7b23ebf54997a9494fc880acbacc9cd5faff
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\bin\Debug\netcoreapp2.0\PetsLostAndFound.Common.dll
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\bin\Debug\netcoreapp2.0\PetsLostAndFound.Db.dll
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\bin\Debug\netcoreapp2.0\PetsLostAndFound.Common.pdb
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\PetsLostAndFound.Web\bin\Debug\netcoreapp2.0\PetsLostAndFound.Db.pdb
