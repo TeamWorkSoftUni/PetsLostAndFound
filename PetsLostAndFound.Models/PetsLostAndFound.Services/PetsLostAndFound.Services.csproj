@@ -4,4 +4,9 @@
     <TargetFramework>netstandard2.0</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Pets.LostAndFound.Common\PetsLostAndFound.Common.csproj" />
+    <ProjectReference Include="..\PetsLostAndFound.Db\PetsLostAndFound.Db.csproj" />
+  </ItemGroup>
+
 </Project>

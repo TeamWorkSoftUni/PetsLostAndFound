@@ -20,7 +20,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\PetsLostAndFound.Data\PetsLostAndFound.Data.csproj" />
+    <ProjectReference Include="..\Pets.LostAndFound.Common\PetsLostAndFound.Common.csproj" />
+    <ProjectReference Include="..\PetsLostAndFound.Db\PetsLostAndFound.Db.csproj" />
     <ProjectReference Include="..\PetsLostAndFound.Services\PetsLostAndFound.Services.csproj" />
   </ItemGroup>
 

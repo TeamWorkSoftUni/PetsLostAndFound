@@ -1,7 +1,7 @@
 {
   "runtimeTarget": {
     "name": ".NETCoreApp,Version=v2.0",
-    "signature": "e801a3592edcb355dfe597c25ed53c580b23c71b"
+    "signature": "399e146e05fc8cbd1a255fb875c48daa6296c752"
   },
   "compilationOptions": {
     "defines": [
@@ -27,7 +27,8 @@
           "Microsoft.EntityFrameworkCore.Tools": "2.0.1",
           "Microsoft.NETCore.App": "2.0.0",
           "Microsoft.VisualStudio.Web.CodeGeneration.Design": "2.0.1",
-          "PetsLostAndFound.Data": "1.0.0",
+          "PetsLostAndFound.Common": "1.0.0",
+          "PetsLostAndFound.Db": "1.0.0",
           "PetsLostAndFound.Services": "1.0.0"
         },
         "runtime": {
@@ -35,6 +36,27 @@
         },
         "compile": {
           "PetsLostAndFound.Web.dll": {}
+        }
+      },
+      "AutoMapper/6.2.2": {
+        "dependencies": {
+          "Microsoft.CSharp": "4.4.0",
+          "NETStandard.Library": "2.0.0",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0"
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        },
+        "compile": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
         }
       },
       "Libuv/1.10.0": {
@@ -2511,7 +2533,7 @@
           "System.Diagnostics.Debug": "4.3.0",
           "System.Linq": "4.3.0",
           "System.Linq.Expressions": "4.3.0",
-          "System.Linq.Queryable": "4.0.1",
+          "System.Linq.Queryable": "4.3.0",
           "System.ObjectModel": "4.3.0",
           "System.Reflection": "4.3.0",
           "System.Reflection.Extensions": "4.3.0",
@@ -3015,14 +3037,6 @@
           "ref/netstandard2.0/System.Data.SqlClient.dll": {}
         }
       },
-      "System.Device.Location.Portable/1.0.0": {
-        "runtime": {
-          "lib/System.Device.Portable.dll": {}
-        },
-        "compile": {
-          "lib/System.Device.Portable.dll": {}
-        }
-      },
       "System.Diagnostics.Contracts/4.3.0": {
         "dependencies": {
           "System.Runtime": "4.3.0"
@@ -3255,7 +3269,7 @@
           "System.Threading.Tasks": "4.3.0"
         }
       },
-      "System.Linq.Queryable/4.0.1": {
+      "System.Linq.Queryable/4.3.0": {
         "dependencies": {
           "System.Collections": "4.3.0",
           "System.Diagnostics.Debug": "4.3.0",
@@ -4064,20 +4078,35 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "PetsLostAndFound.Data/1.0.0": {
+      "PetsLostAndFound.Common/1.0.0": {
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "System.Device.Location.Portable": "1.0.0"
+          "AutoMapper": "6.2.2"
         },
         "runtime": {
-          "PetsLostAndFound.Data.dll": {}
+          "PetsLostAndFound.Common.dll": {}
         },
         "compile": {
-          "PetsLostAndFound.Data.dll": {}
+          "PetsLostAndFound.Common.dll": {}
+        }
+      },
+      "PetsLostAndFound.Db/1.0.0": {
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1"
+        },
+        "runtime": {
+          "PetsLostAndFound.Db.dll": {}
+        },
+        "compile": {
+          "PetsLostAndFound.Db.dll": {}
         }
       },
       "PetsLostAndFound.Services/1.0.0": {
+        "dependencies": {
+          "PetsLostAndFound.Common": "1.0.0",
+          "PetsLostAndFound.Db": "1.0.0"
+        },
         "runtime": {
           "PetsLostAndFound.Services.dll": {}
         },
@@ -4268,6 +4297,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "AutoMapper/6.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
+      "path": "automapper/6.2.2",
+      "hashPath": "automapper.6.2.2.nupkg.sha512"
     },
     "Libuv/1.10.0": {
       "type": "package",
@@ -5830,13 +5866,6 @@
       "path": "system.data.sqlclient/4.4.0",
       "hashPath": "system.data.sqlclient.4.4.0.nupkg.sha512"
     },
-    "System.Device.Location.Portable/1.0.0": {
-      "type": "package",
-      "serviceable": true,
-      "sha512": "sha512-VttxozXEleYcK2NiMo7xKMhDCCJbKtjnxcWDmqu703DeceLTI/9jopfEblyZKL0DWHGyOYLEan06yk6Hcv2cXw==",
-      "path": "system.device.location.portable/1.0.0",
-      "hashPath": "system.device.location.portable.1.0.0.nupkg.sha512"
-    },
     "System.Diagnostics.Contracts/4.3.0": {
       "type": "package",
       "serviceable": true,
@@ -5977,12 +6006,12 @@
       "path": "system.linq.parallel/4.3.0",
       "hashPath": "system.linq.parallel.4.3.0.nupkg.sha512"
     },
-    "System.Linq.Queryable/4.0.1": {
+    "System.Linq.Queryable/4.3.0": {
       "type": "package",
       "serviceable": true,
-      "sha512": "sha512-Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
-      "path": "system.linq.queryable/4.0.1",
-      "hashPath": "system.linq.queryable.4.0.1.nupkg.sha512"
+      "sha512": "sha512-In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
+      "path": "system.linq.queryable/4.3.0",
+      "hashPath": "system.linq.queryable.4.3.0.nupkg.sha512"
     },
     "System.Net.Http/4.3.0": {
       "type": "package",
@@ -6404,7 +6433,12 @@
       "path": "windowsazure.storage/8.1.4",
       "hashPath": "windowsazure.storage.8.1.4.nupkg.sha512"
     },
-    "PetsLostAndFound.Data/1.0.0": {
+    "PetsLostAndFound.Common/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "PetsLostAndFound.Db/1.0.0": {
       "type": "project",
       "serviceable": false,
       "sha512": ""

@@ -2,6 +2,28 @@
   "version": 3,
   "targets": {
     ".NETCoreApp,Version=v2.0": {
+      "AutoMapper/6.2.2": {
+        "type": "package",
+        "dependencies": {
+          "Microsoft.CSharp": "4.3.0",
+          "NETStandard.Library": "1.6.1",
+          "System.Collections.Concurrent": "4.3.0",
+          "System.Collections.Specialized": "4.3.0",
+          "System.ComponentModel.TypeConverter": "4.3.0",
+          "System.Dynamic.Runtime": "4.3.0",
+          "System.Linq.Queryable": "4.3.0",
+          "System.Reflection.Emit": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime.Serialization.Primitives": "4.3.0",
+          "System.Text.RegularExpressions": "4.3.0"
+        },
+        "compile": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard1.3/AutoMapper.dll": {}
+        }
+      },
       "Libuv/1.10.0": {
         "type": "package",
         "dependencies": {
@@ -3563,15 +3585,6 @@
           }
         }
       },
-      "System.Device.Location.Portable/1.0.0": {
-        "type": "package",
-        "compile": {
-          "lib/System.Device.Portable.dll": {}
-        },
-        "runtime": {
-          "lib/System.Device.Portable.dll": {}
-        }
-      },
       "System.Diagnostics.Contracts/4.3.0": {
         "type": "package",
         "dependencies": {
@@ -3903,17 +3916,17 @@
           "lib/netstandard1.3/System.Linq.Parallel.dll": {}
         }
       },
-      "System.Linq.Queryable/4.0.1": {
+      "System.Linq.Queryable/4.3.0": {
         "type": "package",
         "dependencies": {
-          "System.Collections": "4.0.11",
-          "System.Diagnostics.Debug": "4.0.11",
-          "System.Linq": "4.1.0",
-          "System.Linq.Expressions": "4.1.0",
-          "System.Reflection": "4.1.0",
-          "System.Reflection.Extensions": "4.0.1",
-          "System.Resources.ResourceManager": "4.0.1",
-          "System.Runtime": "4.1.0"
+          "System.Collections": "4.3.0",
+          "System.Diagnostics.Debug": "4.3.0",
+          "System.Linq": "4.3.0",
+          "System.Linq.Expressions": "4.3.0",
+          "System.Reflection": "4.3.0",
+          "System.Reflection.Extensions": "4.3.0",
+          "System.Resources.ResourceManager": "4.3.0",
+          "System.Runtime": "4.3.0"
         },
         "compile": {
           "ref/netstandard1.0/System.Linq.Queryable.dll": {}
@@ -5038,24 +5051,41 @@
           "lib/netstandard1.3/Microsoft.WindowsAzure.Storage.dll": {}
         }
       },
-      "PetsLostAndFound.Data/1.0.0": {
+      "PetsLostAndFound.Common/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v2.0",
+        "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
-          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1",
-          "System.Device.Location.Portable": "1.0.0"
+          "AutoMapper": "6.2.2"
         },
         "compile": {
-          "bin/placeholder/PetsLostAndFound.Data.dll": {}
+          "bin/placeholder/PetsLostAndFound.Common.dll": {}
         },
         "runtime": {
-          "bin/placeholder/PetsLostAndFound.Data.dll": {}
+          "bin/placeholder/PetsLostAndFound.Common.dll": {}
+        }
+      },
+      "PetsLostAndFound.Db/1.0.0": {
+        "type": "project",
+        "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "Microsoft.AspNetCore.Identity.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore": "2.0.1",
+          "Microsoft.EntityFrameworkCore.SqlServer": "2.0.1"
+        },
+        "compile": {
+          "bin/placeholder/PetsLostAndFound.Db.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/PetsLostAndFound.Db.dll": {}
         }
       },
       "PetsLostAndFound.Services/1.0.0": {
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
+        "dependencies": {
+          "PetsLostAndFound.Common": "1.0.0",
+          "PetsLostAndFound.Db": "1.0.0"
+        },
         "compile": {
           "bin/placeholder/PetsLostAndFound.Services.dll": {}
         },
@@ -5066,6 +5096,23 @@
     }
   },
   "libraries": {
+    "AutoMapper/6.2.2": {
+      "sha512": "eGKcnJdoF5rYMWPUaSPtlWdvua9xw4hnQN5kM/X4AXLGKghrtPIaMv+RYoA3sj0kyZ3X6wZ1Qj67F+u0pCCPaw==",
+      "type": "package",
+      "path": "automapper/6.2.2",
+      "files": [
+        "automapper.6.2.2.nupkg.sha512",
+        "automapper.nuspec",
+        "lib/net40/AutoMapper.dll",
+        "lib/net40/AutoMapper.xml",
+        "lib/net45/AutoMapper.dll",
+        "lib/net45/AutoMapper.xml",
+        "lib/netstandard1.1/AutoMapper.dll",
+        "lib/netstandard1.1/AutoMapper.xml",
+        "lib/netstandard1.3/AutoMapper.dll",
+        "lib/netstandard1.3/AutoMapper.xml"
+      ]
+    },
     "Libuv/1.10.0": {
       "sha512": "GsCf4q+eyaI49rCPlgYxdxa1SQCysXFFdSJWdstrwxytg4+VPYLYrXD4AT2rjHVJ+UF7SSWX9CapWEYaU4ejVQ==",
       "type": "package",
@@ -9175,16 +9222,6 @@
         "version.txt"
       ]
     },
-    "System.Device.Location.Portable/1.0.0": {
-      "sha512": "VttxozXEleYcK2NiMo7xKMhDCCJbKtjnxcWDmqu703DeceLTI/9jopfEblyZKL0DWHGyOYLEan06yk6Hcv2cXw==",
-      "type": "package",
-      "path": "system.device.location.portable/1.0.0",
-      "files": [
-        "lib/System.Device.Portable.dll",
-        "system.device.location.portable.1.0.0.nupkg.sha512",
-        "system.device.location.portable.nuspec"
-      ]
-    },
     "System.Diagnostics.Contracts/4.3.0": {
       "sha512": "eelRRbnm+OloiQvp9CXS0ixjNQldjjkHO4iIkR5XH2VIP8sUB/SIpa1TdUW6/+HDcQ+MlhP3pNa1u5SbzYuWGA==",
       "type": "package",
@@ -10225,10 +10262,10 @@
         "system.linq.parallel.nuspec"
       ]
     },
-    "System.Linq.Queryable/4.0.1": {
-      "sha512": "Yn/WfYe9RoRfmSLvUt2JerP0BTGGykCZkQPgojaxgzF2N0oPo+/AhB8TXOpdCcNlrG3VRtsamtK2uzsp3cqRVw==",
+    "System.Linq.Queryable/4.3.0": {
+      "sha512": "In1Bmmvl/j52yPu3xgakQSI0YIckPUr870w4K5+Lak3JCCa8hl+my65lABOuKfYs4ugmZy25ScFerC4nz8+b6g==",
       "type": "package",
-      "path": "system.linq.queryable/4.0.1",
+      "path": "system.linq.queryable/4.3.0",
       "files": [
         "ThirdPartyNotices.txt",
         "dotnet_library_license.txt",
@@ -10278,7 +10315,7 @@
         "ref/xamarinmac20/_._",
         "ref/xamarintvos10/_._",
         "ref/xamarinwatchos10/_._",
-        "system.linq.queryable.4.0.1.nupkg.sha512",
+        "system.linq.queryable.4.3.0.nupkg.sha512",
         "system.linq.queryable.nuspec"
       ]
     },
@@ -13157,10 +13194,15 @@
         "windowsazure.storage.nuspec"
       ]
     },
-    "PetsLostAndFound.Data/1.0.0": {
+    "PetsLostAndFound.Common/1.0.0": {
       "type": "project",
-      "path": "../PetsLostAndFound.Data/PetsLostAndFound.Data.csproj",
-      "msbuildProject": "../PetsLostAndFound.Data/PetsLostAndFound.Data.csproj"
+      "path": "../Pets.LostAndFound.Common/PetsLostAndFound.Common.csproj",
+      "msbuildProject": "../Pets.LostAndFound.Common/PetsLostAndFound.Common.csproj"
+    },
+    "PetsLostAndFound.Db/1.0.0": {
+      "type": "project",
+      "path": "../PetsLostAndFound.Db/PetsLostAndFound.Db.csproj",
+      "msbuildProject": "../PetsLostAndFound.Db/PetsLostAndFound.Db.csproj"
     },
     "PetsLostAndFound.Services/1.0.0": {
       "type": "project",
@@ -13174,7 +13216,8 @@
       "Microsoft.EntityFrameworkCore.Tools >= 2.0.1",
       "Microsoft.NETCore.App >= 2.0.0",
       "Microsoft.VisualStudio.Web.CodeGeneration.Design >= 2.0.1",
-      "PetsLostAndFound.Data >= 1.0.0",
+      "PetsLostAndFound.Common >= 1.0.0",
+      "PetsLostAndFound.Db >= 1.0.0",
       "PetsLostAndFound.Services >= 1.0.0"
     ]
   },
@@ -13211,8 +13254,11 @@
       "frameworks": {
         "netcoreapp2.0": {
           "projectReferences": {
-            "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Data\\PetsLostAndFound.Data.csproj": {
-              "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Data\\PetsLostAndFound.Data.csproj"
+            "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj": {
+              "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\Pets.LostAndFound.Common\\PetsLostAndFound.Common.csproj"
+            },
+            "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj": {
+              "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Db\\PetsLostAndFound.Db.csproj"
             },
             "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj": {
               "projectPath": "C:\\Users\\Alien\\source\\repos\\PetsLostAndFound\\PetsLostAndFound.Models\\PetsLostAndFound.Services\\PetsLostAndFound.Services.csproj"
@@ -13256,17 +13302,5 @@
         "warn": true
       }
     }
-  },
-  "logs": [
-    {
-      "code": "NU1701",
-      "level": "Warning",
-      "warningLevel": 1,
-      "message": "Package 'System.Device.Location.Portable 1.0.0' was restored using '.NETFramework,Version=v4.6.1' instead of the project target framework '.NETCoreApp,Version=v2.0'. This package may not be fully compatible with your project.",
-      "libraryId": "System.Device.Location.Portable",
-      "targetGraphs": [
-        ".NETCoreApp,Version=v2.0"
-      ]
-    }
-  ]
+  }
 }
