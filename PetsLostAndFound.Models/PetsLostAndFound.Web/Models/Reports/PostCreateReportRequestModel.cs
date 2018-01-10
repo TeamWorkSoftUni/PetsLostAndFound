@@ -1,9 +1,9 @@
 ﻿namespace PetsLostAndFound.Web.Models.Reports
 {
+    using Services.Models.Locations;
+    using Services.Models.Pets;
     using System;
     using System.Collections.Generic;
-    using Db.Models;
-    using Services.Models.Pets;
 
     public class PostCreateReportRequestModel
     {
@@ -17,7 +17,7 @@
 
         public double RewardSum { get; set; }
 
-        public Location Location { get; set; }
+        public PostLocationServiceModel Location { get; set; }
 
         public string UserId { get; set; }
 
@@ -31,11 +31,4 @@
 //"locationAdress": "BG Shirke Rd, Magarpatta City, Hadapsar, Pune, Maharashtra, Индия",
 //"latitude": 42.69761870000001,
 //"longitude": 23.319110300000034
-//}
-
-//"targetPet": {
-//"petType": "dog",
-//"petName": "Chochko",
-//"age": 1,
-//"description": "Big fat mother fucker..."
 //}

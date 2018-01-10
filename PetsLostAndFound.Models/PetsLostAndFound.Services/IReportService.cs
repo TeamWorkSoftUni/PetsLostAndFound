@@ -1,9 +1,9 @@
 ﻿namespace PetsLostAndFound.Services
 {
-    using PetsLostAndFound.Db.Models;
-    using PetsLostAndFound.Services.Models.Reports;
+    using Models.Reports;
     using System.Collections.Generic;
-    using PetsLostAndFound.Services.Models.Pets;
+    using Models.Locations;
+    using Models.Pets;
 
     public interface IReportService
     {
@@ -16,7 +16,7 @@
             double rewardSum,
             PostPetServiceModel pet,
             string content,
-            Location location
+            PostLocationServiceModel location
            );
 
         bool IsExist(int id);

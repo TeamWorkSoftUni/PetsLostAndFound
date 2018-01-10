@@ -9,6 +9,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using PetsLostAndFound.Services.Models.Locations;
     using PetsLostAndFound.Services.Models.Pets;
 
     public class ReportService : IReportService
@@ -16,12 +17,14 @@
         private readonly PetsDbContext db;
         private readonly IMapper mapper;
         private readonly IPetService pet;
+        private readonly ILocationSevices location;
 
-        public ReportService(PetsDbContext db, IMapper mapper, IPetService pet)
+        public ReportService(PetsDbContext db, IMapper mapper, IPetService pet, ILocationSevices location)
         {
             this.db = db;
             this.mapper = mapper;
             this.pet = pet;
+            this.location = location;
         }
 
         public IEnumerable<ReportListingServiceModel> AllListing()
@@ -37,11 +40,13 @@
             double rewardSum,
             PostPetServiceModel petModel, 
             string content, 
-            Location location)
+            PostLocationServiceModel locationModel)
         {
             var status = (StatusType)Enum.Parse(typeof(StatusType), statusType, true);
 
             this.pet.Create(petModel.PetType, petModel.PetName, petModel.Age, petModel.RFID, petModel.Description);
+            var locationId =
+                this.location.Create(locationModel.LocationAddress, locationModel.Latitude, locationModel.Longitude);
 
             var report = new Report
             {
@@ -50,7 +55,7 @@
                 ImagesLinksPost = imagesLinksPost,
                 RewardSum = rewardSum,
                 Content = content,
-                Location = location,
+                LocationId = locationId,
                 LostDate = DateTime.UtcNow.Date
             };
 
