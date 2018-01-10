@@ -27,7 +27,12 @@
             .ProjectTo<PetListingServiceModel>()
             .ToList();
 
-        public PetListingServiceModel Create(string petType, string name, int age, string rfid, string imageLinks, string description, string userId)
+        public PetListingServiceModel Create(
+            string petType,
+            string name, 
+            int age, 
+            string rfid, 
+            string description)
         {
             // CHECK FOR USER 
 
@@ -39,10 +44,7 @@
                 Name = name,
                 Age = age,
                 RFID = rfid,
-                ImageLinks = imageLinks,
                 PetDescription = description,
-                UserId = userId,
-                RegistrationDate = DateTime.UtcNow.Date
             };
 
             this.db.Pets.Add(pet);

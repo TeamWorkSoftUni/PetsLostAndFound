@@ -1,9 +1,9 @@
 ﻿namespace PetsLostAndFound.Services
 {
     using PetsLostAndFound.Db.Models;
-    using PetsLostAndFound.Db.Models.Enums;
     using PetsLostAndFound.Services.Models.Reports;
     using System.Collections.Generic;
+    using PetsLostAndFound.Services.Models.Pets;
 
     public interface IReportService
     {
@@ -14,7 +14,7 @@
             string userId,
             string imagesLinksPost,
             double rewardSum,
-            Pet pet,
+            PostPetServiceModel pet,
             string content,
             Location location
            );

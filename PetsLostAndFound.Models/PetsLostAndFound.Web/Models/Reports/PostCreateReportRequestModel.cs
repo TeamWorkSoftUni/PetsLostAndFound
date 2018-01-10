@@ -3,7 +3,7 @@
     using System;
     using System.Collections.Generic;
     using Db.Models;
-    using Db.Models.Enums;
+    using Services.Models.Pets;
 
     public class PostCreateReportRequestModel
     {
@@ -21,7 +21,7 @@
 
         public string UserId { get; set; }
 
-        public Pet TargetPet { get; set; }
+        public PostPetServiceModel TargetPet { get; set; }
 
         public IEnumerable<string> TargetPetImagesId { get; set; }
     }
