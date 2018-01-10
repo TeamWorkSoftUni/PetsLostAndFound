@@ -1,12 +1,11 @@
 namespace PetsLostAndFound.Web.Models.Pets
 {
-  using PetsLostAndFound.Db.Models.Enums;
-  using System.ComponentModel.DataAnnotations;
+    using System.ComponentModel.DataAnnotations;
 
-  public class PostCreatePetRequestModel
+    public class PostCreatePetRequestModel
   {
 
-    public PetType PetType { get; set; }
+    public string PetType { get; set; }
 
     [Required]
     public string Name { get; set; }

@@ -1,15 +1,14 @@
 ﻿namespace PetsLostAndFound.Services.Implementations
 {
-    using System;
-    using System.Collections.Generic;
-    using System.Linq;
     using AutoMapper;
     using AutoMapper.QueryableExtensions;
     using PetsLostAndFound.Db;
     using PetsLostAndFound.Db.Models;
     using PetsLostAndFound.Db.Models.Enums;
-    using PetsLostAndFound.Services.Models.Pets;
     using PetsLostAndFound.Services.Models.Reports;
+    using System;
+    using System.Collections.Generic;
+    using System.Linq;
 
     public class ReporetService : IReportService
     {

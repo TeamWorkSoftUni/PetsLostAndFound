@@ -1,34 +1,30 @@
 namespace PetsLostAndFound.Web.Controllers
 {
-  using Microsoft.AspNetCore.Authentication;
-  using Microsoft.AspNetCore.Authorization;
-  using Microsoft.AspNetCore.Identity;
-  using Microsoft.AspNetCore.Mvc;
-  using Microsoft.Extensions.Logging;
-  using PetsLostAndFound.Db.Models;
-  using PetsLostAndFound.Web.Models.AccountViewModels;
-  using PetsLostAndFound.Web.Services;
-  using System;
-  using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authentication;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using PetsLostAndFound.Db.Models;
+    using PetsLostAndFound.Web.Models.AccountViewModels;
+    using System;
+    using System.Threading.Tasks;
 
 
-  [Authorize]
+    [Authorize]
   public class AccountController : BaseController
   {
     private readonly UserManager<User> userManager;
     private readonly SignInManager<User> signInManager;
-    private readonly IEmailSender emailSender;
     private readonly ILogger logger;
 
     public AccountController(
         UserManager<User> userManager,
         SignInManager<User> signInManager,
-        IEmailSender emailSender,
         ILogger<AccountController> logger)
     {
       this.userManager = userManager;
       this.signInManager = signInManager;
-      this.emailSender = emailSender;
       this.logger = logger;
     }
 

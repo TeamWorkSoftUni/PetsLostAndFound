@@ -1,10 +1,9 @@
 ﻿namespace PetsLostAndFound.Services
 {
-    using System.Collections.Generic;
     using PetsLostAndFound.Db.Models;
     using PetsLostAndFound.Db.Models.Enums;
-    using PetsLostAndFound.Services.Models.Pets;
     using PetsLostAndFound.Services.Models.Reports;
+    using System.Collections.Generic;
 
     public interface IReportService
     {

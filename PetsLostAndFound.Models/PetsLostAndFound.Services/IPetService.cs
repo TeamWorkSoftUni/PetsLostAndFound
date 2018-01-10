@@ -1,6 +1,5 @@
 ﻿namespace PetsLostAndFound.Services
 {
-    using PetsLostAndFound.Db.Models.Enums;
     using PetsLostAndFound.Services.Models.Pets;
     using System.Collections.Generic;
 
@@ -9,7 +8,7 @@
         IEnumerable<PetListingServiceModel> AllListing();
 
         PetListingServiceModel Create(
-                PetType petType,
+                string petType,
                 string name,
                 int age,
                 string rfid,

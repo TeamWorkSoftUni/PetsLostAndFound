@@ -1,14 +1,14 @@
 ﻿namespace PetsLostAndFound.Services.Implementations
 {
+    using AutoMapper;
     using AutoMapper.QueryableExtensions;
     using PetsLostAndFound.Db;
+    using PetsLostAndFound.Db.Models;
+    using PetsLostAndFound.Db.Models.Enums;
     using PetsLostAndFound.Services.Models.Pets;
+    using System;
     using System.Collections.Generic;
     using System.Linq;
-    using PetsLostAndFound.Db.Models.Enums;
-    using PetsLostAndFound.Db.Models;
-    using System;
-    using AutoMapper;
 
     public class PetService : IPetService
     {
@@ -27,13 +27,15 @@
             .ProjectTo<PetListingServiceModel>()
             .ToList();
 
-        public PetListingServiceModel Create(PetType petType, string name, int age, string rfid, string imageLinks, string description, string userId)
+        public PetListingServiceModel Create(string petType, string name, int age, string rfid, string imageLinks, string description, string userId)
         {
             // CHECK FOR USER 
 
+            var current = (PetType) Enum.Parse(typeof(PetType), petType, true);
+
             var pet = new Pet
             {
-                PetType = petType,
+                PetType = current,
                 Name = name,
                 Age = age,
                 RFID = rfid,

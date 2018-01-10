@@ -7,3 +7,12 @@ E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLo
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.AssemblyInfo.cs
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.dll
 E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.pdb
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\bin\Debug\netstandard2.0\PetsLostAndFound.Common.deps.json
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\bin\Debug\netstandard2.0\PetsLostAndFound.Common.dll
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\bin\Debug\netstandard2.0\PetsLostAndFound.Common.pdb
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.csprojResolveAssemblyReference.cache
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.csproj.CoreCompileInputs.cache
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.AssemblyInfoInputs.cache
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.AssemblyInfo.cs
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.dll
+C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.pdb

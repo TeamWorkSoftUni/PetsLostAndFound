@@ -1,29 +1,28 @@
 namespace PetsLostAndFound.Web.Infrastructure.Extencions
 {
-  using Microsoft.Extensions.DependencyInjection;
-  using Services;
-  using System.Linq;
-  using System.Reflection;
-  using PetsLostAndFound.Services;
+    using Microsoft.Extensions.DependencyInjection;
+    using PetsLostAndFound.Services;
+    using System.Linq;
+    using System.Reflection;
 
-  public static class ServiceCollectionExtensions
-  {
-    public static IServiceCollection AddDomainServices(
-      this IServiceCollection services)
+    public static class ServiceCollectionExtensions
     {
-      Assembly
-        .GetAssembly(typeof(IService))
-        .GetTypes()
-        .Where(t => t.IsClass && t.GetInterfaces().Any(i => i.Name == $"I{t.Name}"))
-        .Select(t => new
+        public static IServiceCollection AddDomainServices(
+                this IServiceCollection services)
         {
-          Interface = t.GetInterface($"I{t.Name}"),
-          Implementation = t
-        })
-        .ToList()
-        .ForEach(s => services.AddTransient(s.Interface, s.Implementation));
+            Assembly
+                .GetAssembly(typeof(IService))
+                .GetTypes()
+                .Where(t => t.IsClass && t.GetInterfaces().Any(i => i.Name == $"I{t.Name}"))
+                .Select(t => new
+                {
+                    Interface = t.GetInterface($"I{t.Name}"),
+                    Implementation = t
+                })
+                .ToList()
+                .ForEach(s => services.AddTransient(s.Interface, s.Implementation));
 
-      return services;
+            return services;
+        }
     }
-  }
 }

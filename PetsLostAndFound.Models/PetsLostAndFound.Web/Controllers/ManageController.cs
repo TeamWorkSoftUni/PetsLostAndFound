@@ -1,25 +1,23 @@
 namespace PetsLostAndFound.Web.Controllers
 {
-  using Microsoft.AspNetCore.Authentication;
-  using Microsoft.AspNetCore.Authorization;
-  using Microsoft.AspNetCore.Identity;
-  using Microsoft.AspNetCore.Mvc;
-  using Microsoft.Extensions.Logging;
-  using PetsLostAndFound.Db.Models;
-  using PetsLostAndFound.Web.Models.ManageViewModels;
-  using PetsLostAndFound.Web.Services;
-  using System;
-  using System.Linq;
-  using System.Text;
-  using System.Text.Encodings.Web;
-  using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Authentication;
+    using Microsoft.AspNetCore.Authorization;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.Extensions.Logging;
+    using PetsLostAndFound.Db.Models;
+    using PetsLostAndFound.Web.Models.ManageViewModels;
+    using System;
+    using System.Linq;
+    using System.Text;
+    using System.Text.Encodings.Web;
+    using System.Threading.Tasks;
 
-  [Authorize]
+    [Authorize]
   public class ManageController : BaseController
   {
     private readonly UserManager<User> userManager;
     private readonly SignInManager<User> signInManager;
-    private readonly IEmailSender emailSender;
     private readonly ILogger logger;
     private readonly UrlEncoder _urlEncoder;
 
@@ -28,13 +26,11 @@ namespace PetsLostAndFound.Web.Controllers
     public ManageController(
       UserManager<User> userManager,
       SignInManager<User> signInManager,
-      IEmailSender emailSender,
       ILogger<ManageController> logger,
       UrlEncoder urlEncoder)
     {
       this.userManager = userManager;
       this.signInManager = signInManager;
-      this.emailSender = emailSender;
       this.logger = logger;
       _urlEncoder = urlEncoder;
     }
