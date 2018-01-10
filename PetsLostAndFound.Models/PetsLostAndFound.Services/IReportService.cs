@@ -18,5 +18,7 @@
             string content,
             Location location
            );
+
+        bool IsExist(int id);
     }
 }

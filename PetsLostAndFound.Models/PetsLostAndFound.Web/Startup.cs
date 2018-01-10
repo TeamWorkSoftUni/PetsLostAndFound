@@ -2,20 +2,18 @@ namespace PetsLostAndFound.Web
 {
     using AutoMapper;
     using Microsoft.AspNetCore.Builder;
-  using Microsoft.AspNetCore.Hosting;
-  using Microsoft.AspNetCore.Identity;
-  using Microsoft.AspNetCore.Mvc;
-  using Microsoft.AspNetCore.Mvc.Cors.Internal;
-  using Microsoft.EntityFrameworkCore;
-  using Microsoft.Extensions.Configuration;
-  using Microsoft.Extensions.DependencyInjection;
-  using PetsLostAndFound.Db;
-  using PetsLostAndFound.Db.Models;
-  using PetsLostAndFound.Web.Infrastructure.Extencions;
+    using Microsoft.AspNetCore.Hosting;
+    using Microsoft.AspNetCore.Identity;
+    using Microsoft.AspNetCore.Mvc;
+    using Microsoft.AspNetCore.Mvc.Cors.Internal;
+    using Microsoft.EntityFrameworkCore;
+    using Microsoft.Extensions.Configuration;
+    using Microsoft.Extensions.DependencyInjection;
+    using PetsLostAndFound.Db;
+    using PetsLostAndFound.Db.Models;
+    using PetsLostAndFound.Web.Infrastructure.Extencions;
 
-  using Services;
-
-  public class Startup
+    public class Startup
   {
     public Startup(IConfiguration configuration)
     {
@@ -65,8 +63,7 @@ namespace PetsLostAndFound.Web
                     options.Filters.Add(new CorsAuthorizationFilterFactory("AllowSpecificOrigin"));
                 });
         }
-
-    }
+        
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
       app.UseDatabaseMigration();
