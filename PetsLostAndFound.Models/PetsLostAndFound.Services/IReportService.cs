@@ -10,7 +10,7 @@
         IEnumerable<ReportListingServiceModel> AllListing();
 
         ReportListingServiceModel Create(
-            StatusType statusType,
+            string statusType,
             string userId,
             string imagesLinksPost,
             double rewardSum,

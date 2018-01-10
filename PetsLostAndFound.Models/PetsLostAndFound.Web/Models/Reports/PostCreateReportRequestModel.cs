@@ -7,7 +7,7 @@
 
     public class PostCreateReportRequestModel
     {
-        public StatusType StatusType { get; set; }
+        public string StatusType { get; set; }
 
         public DateTime LostFoundDate { get; set; }
 

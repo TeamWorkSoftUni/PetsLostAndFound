@@ -28,7 +28,7 @@
                 .ToList();
 
         public ReportListingServiceModel Create(
-            StatusType statusType, 
+            string statusType, 
             string userId, 
             string imagesLinksPost, 
             double rewardSum,
@@ -36,9 +36,11 @@
             string content, 
             Location location)
         {
+            var status = (StatusType)Enum.Parse(typeof(StatusType), statusType, true);
+
             var report = new Report
             {
-                Status = statusType,
+                Status = status,
                 UserId = userId,
                 ImagesLinksPost = imagesLinksPost,
                 RewardSum = rewardSum,
