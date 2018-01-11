@@ -9,6 +9,7 @@ namespace PetsLostAndFound.Web.Controllers
     using PetsLostAndFound.Web.Models.AccountViewModels;
     using System;
     using System.Threading.Tasks;
+    using PetsLostAndFound.Common;
 
 
     [Authorize]
@@ -45,27 +46,28 @@ namespace PetsLostAndFound.Web.Controllers
 
     [HttpPost]
     [AllowAnonymous]
-    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Login([FromBody] PostLoginRequrestModel model, string returnUrl = null)
     {
       ViewData["ReturnUrl"] = returnUrl;
-      if (ModelState.IsValid)
+
+      if (!ModelState.IsValid)
       {
+          return BadRequest(ModelState);
+      }
+
         var result = await this.signInManager
-          .PasswordSignInAsync(model.Username, model.Password, model.RememberMe, lockoutOnFailure: false);
+            .PasswordSignInAsync(model.Username, model.Password, model.RememberMe, lockoutOnFailure: false);
         if (result.Succeeded)
         {
-          this.logger.LogInformation("User logged in.");
-          return RedirectToLocal(returnUrl);
+            this.logger.LogInformation("User logged in.");
+            var successMessage = new ResponseMessage {Success = true, Message = "You have successfully logged in!"};
+            return this.Ok(successMessage);
         }
         else
         {
-          ModelState.AddModelError(string.Empty, "Invalid login attempt.");
-          return BadRequest();
+            ModelState.AddModelError(string.Empty, "Invalid login attempt.");
+            return BadRequest();
         }
-      }
-
-      return this.Ok();
     }
 
     [HttpGet]
@@ -78,12 +80,15 @@ namespace PetsLostAndFound.Web.Controllers
 
     [HttpPost]
     [AllowAnonymous]
-    //[ValidateAntiForgeryToken]
     public async Task<IActionResult> Register([FromBody] PostRegisterRequestModel model, string returnUrl = null)
     {
-      ViewData["ReturnUrl"] = returnUrl;
-      if (ModelState.IsValid)
-      {
+        ViewData["ReturnUrl"] = returnUrl;
+
+        if (!ModelState.IsValid)
+        {
+            return BadRequest(ModelState);
+        }
+
         var user = new User
         {
             UserName = model.Username,
@@ -93,22 +98,20 @@ namespace PetsLostAndFound.Web.Controllers
         var result = await this.userManager.CreateAsync(user, model.Password);
         if (result.Succeeded)
         {
-          this.logger.LogInformation("User created a new account with password.");
-          var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
+            this.logger.LogInformation("User created a new account with password.");
+            var code = await this.userManager.GenerateEmailConfirmationTokenAsync(user);
 
-          await this.signInManager.SignInAsync(user, isPersistent: false);
-          this.logger.LogInformation("User created a new account with password.");
+            await this.signInManager.SignInAsync(user, isPersistent: false);
+            this.logger.LogInformation("User created a new account with password.");
 
-          return RedirectToLocal(returnUrl);
+            return RedirectToLocal(returnUrl);
         }
         AddErrors(result);
-      }
-      // If we got this far, something failed, redisplay form
-      return Ok(model);
+
+        return Ok(model);
     }
 
     [HttpPost]
-    [ValidateAntiForgeryToken]
     public async Task<IActionResult> Logout()
     {
       await this.signInManager.SignOutAsync();
@@ -126,7 +129,6 @@ namespace PetsLostAndFound.Web.Controllers
 
     [HttpPost]
     [AllowAnonymous]
-    [ValidateAntiForgeryToken]
     public async Task<IActionResult> ForgotPassword(ForgotPasswordViewModel model)
     {
       if (ModelState.IsValid)
@@ -166,7 +168,6 @@ namespace PetsLostAndFound.Web.Controllers
 
     [HttpPost]
     [AllowAnonymous]
-    [ValidateAntiForgeryToken]
     public async Task<IActionResult> ResetPassword(ResetPasswordViewModel model)
     {
       if (!ModelState.IsValid)

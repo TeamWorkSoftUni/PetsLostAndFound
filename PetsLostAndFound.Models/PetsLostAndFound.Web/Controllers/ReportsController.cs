@@ -25,7 +25,7 @@
         {
             if (!ModelState.IsValid)
             {
-                return this.BadRequest();
+                return this.BadRequest(ModelState);
             }
 
             var message = this.reports.Create(
