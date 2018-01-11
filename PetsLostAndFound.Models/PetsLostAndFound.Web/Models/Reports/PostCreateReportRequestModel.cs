@@ -26,9 +26,3 @@
         public IEnumerable<string> TargetPetImagesId { get; set; }
     }
 }
-
-//"location": {
-//"locationAdress": "BG Shirke Rd, Magarpatta City, Hadapsar, Pune, Maharashtra, Индия",
-//"latitude": 42.69761870000001,
-//"longitude": 23.319110300000034
-//}

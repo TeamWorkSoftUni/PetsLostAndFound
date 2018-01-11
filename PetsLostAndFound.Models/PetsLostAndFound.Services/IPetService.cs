@@ -7,7 +7,8 @@
     {
         IEnumerable<PetListingServiceModel> AllListing();
 
-        PetListingServiceModel Create(
+        int Create(
+                string userId,
                 string petType,
                 string name,
                 int age,

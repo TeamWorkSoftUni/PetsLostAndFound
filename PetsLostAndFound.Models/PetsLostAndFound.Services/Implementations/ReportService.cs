@@ -35,29 +35,34 @@
                 .ToList();
 
         public ResponseMessage Create(
-            string statusType, 
+            string statusType,
+            DateTime lostAndFound,
             string userId, 
-            string imagesLinksPost, 
+            IEnumerable<string> imagesLinksPost, 
             double rewardSum,
             PostPetServiceModel petModel, 
             string content, 
             PostLocationServiceModel locationModel)
         {
+
             var status = (StatusType)Enum.Parse(typeof(StatusType), statusType, true);
 
-            this.pet.Create(petModel.PetType, petModel.PetName, petModel.Age, petModel.RFID, petModel.Description);
-            var locationId =
-                this.location.Create(locationModel.LocationAddress, locationModel.Latitude, locationModel.Longitude);
+            var petId = this.pet.Create(userId, petModel.PetType, petModel.PetName, petModel.Age, petModel.RFID, petModel.Description);
+
+            var locationId = this.location.Create(locationModel.LocationAddress, locationModel.Latitude, locationModel.Longitude);
+
+            var images = string.Join(" ", imagesLinksPost);
 
             var report = new Report
             {
                 Status = status,
                 UserId = userId,
-                ImagesLinksPost = imagesLinksPost,
+                ImagesLinksPost = images,
                 RewardSum = rewardSum,
                 Content = content,
                 LocationId = locationId,
-                LostDate = DateTime.UtcNow.Date
+                LostDate = lostAndFound,
+                PetId = petId
             };
 
             this.db.Reports.Add(report);

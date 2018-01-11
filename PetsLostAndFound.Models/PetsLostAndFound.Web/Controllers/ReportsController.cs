@@ -28,19 +28,18 @@
                 return this.BadRequest();
             }
 
-            //TODO 
-            //TargetPetImagesId is coming as IEnumerable but the service is expecting string
+            var message = this.reports.Create(
+                model.StatusType,
+                model.LostFoundDate,
+                model.UserId,
+                model.TargetPetImagesId,
+                model.RewardSum,
+                model.TargetPet,
+                model.Content,
+                model.Location             
+                );
 
-            //var message = this.reports.Create(
-            //    model.StatusType,
-            //    model.UserId,
-            //    model.TargetPetImagesId,
-            //    model.RewardSum,
-            //    model.TargetPet,
-            //    model.Content,
-            //    model.UserId);
-
-            return this.Ok(); //message
+            return this.Ok(message);
         }
     }
 }

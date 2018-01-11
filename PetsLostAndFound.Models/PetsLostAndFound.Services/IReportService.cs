@@ -1,5 +1,6 @@
 ﻿namespace PetsLostAndFound.Services
 {
+    using System;
     using Models.Reports;
     using System.Collections.Generic;
     using Models.Locations;
@@ -12,8 +13,9 @@
 
         ResponseMessage Create(
             string statusType,
+            DateTime lostAndFound,
             string userId,
-            string imagesLinksPost,
+            IEnumerable<string> imagesLinksPost,
             double rewardSum,
             PostPetServiceModel pet,
             string content,

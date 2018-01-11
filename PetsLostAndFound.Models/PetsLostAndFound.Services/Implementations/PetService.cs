@@ -27,15 +27,14 @@
             .ProjectTo<PetListingServiceModel>()
             .ToList();
 
-        public PetListingServiceModel Create(
+        public int Create(
+            string userId,
             string petType,
             string name, 
             int age, 
             string rfid, 
             string description)
         {
-            // CHECK FOR USER 
-
             var current = (PetType) Enum.Parse(typeof(PetType), petType, true);
 
             var pet = new Pet
@@ -45,12 +44,13 @@
                 Age = age,
                 RFID = rfid,
                 PetDescription = description,
+                UserId = userId
             };
 
             this.db.Pets.Add(pet);
             this.db.SaveChanges();
 
-            return this.mapper.Map<PetListingServiceModel>(pet);
+            return pet.Id;
         }
     }
 }
