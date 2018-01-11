@@ -17,7 +17,8 @@
         [HttpGet]
         public IActionResult All()
         {
-            return Ok(this.reports.AllListing());
+            var allReports = this.reports.AllListing();
+            return Ok(allReports);
         }
 
         [HttpPost]
