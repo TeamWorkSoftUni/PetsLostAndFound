@@ -1,8 +1,5 @@
 ﻿namespace PetsLostAndFound.Services.Models.Reports
 {
-    using System;
-    using System.Collections.Generic;
-    using System.ComponentModel.DataAnnotations;
     using PetsLostAndFound.Common.Mapping;
     using PetsLostAndFound.Db.Models;
     using PetsLostAndFound.Db.Models.Enums;
@@ -17,6 +14,8 @@
         public string ImagesLinksPost { get; set; }
 
         public PetListingServiceModel Pet { get; set; }
+
+        public Location Location { get; set; }
 
     }
 }
