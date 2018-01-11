@@ -5,7 +5,7 @@ namespace PetsLostAndFound.Web.Models.AccountViewModels
   public class PostLoginRequrestModel
     {
         [Required]
-        public string Username { get; set; }
+        public string Email { get; set; }
 
         [Required]
         [DataType(DataType.Password)]
