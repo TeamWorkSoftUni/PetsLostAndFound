@@ -22,6 +22,8 @@
             PostLocationServiceModel location
            );
 
-        bool IsExist(int id);
+        GetReportDetailsModel FindById(int id);
+
+        bool IsExists(int id);
     }
 }

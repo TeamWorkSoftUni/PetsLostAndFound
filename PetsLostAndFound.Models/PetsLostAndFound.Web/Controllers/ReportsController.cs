@@ -3,6 +3,7 @@
     using Microsoft.AspNetCore.Mvc;
     using Models.Reports;
     using PetsLostAndFound.Services;
+    using PetsLostAndFound.Services.Models.Reports;
 
     public class ReportsController : BaseController
     {
@@ -41,6 +42,19 @@
                 );
 
             return this.Ok(message);
-                  }
+        }
+
+        [HttpGet("{id}")]
+        public IActionResult Details(int id)
+        {
+            if (!this.reports.IsExists(id))
+            {
+                return BadRequest($"No report with id {id}");
+            }
+
+            var reportById = this.reports.FindById(id);
+
+            return this.Ok(reportById);
+        }
     }
 }

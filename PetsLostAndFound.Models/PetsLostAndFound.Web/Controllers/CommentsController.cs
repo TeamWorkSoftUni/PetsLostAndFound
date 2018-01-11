@@ -31,7 +31,7 @@
         [HttpGet("{id}")]
         public IActionResult All(int reportId)
         {
-            if (!this.reports.IsExist(reportId))
+            if (!this.reports.IsExists(reportId))
             {
                 return BadRequest();
             }
