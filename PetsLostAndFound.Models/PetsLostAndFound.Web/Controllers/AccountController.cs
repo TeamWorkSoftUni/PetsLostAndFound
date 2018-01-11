@@ -95,7 +95,9 @@ namespace PetsLostAndFound.Web.Controllers
             Email = model.Email,
             PhoneNumber = model.TelephoneNumber
         };
+
         var result = await this.userManager.CreateAsync(user, model.Password);
+
         if (result.Succeeded)
         {
             this.logger.LogInformation("User created a new account with password.");
