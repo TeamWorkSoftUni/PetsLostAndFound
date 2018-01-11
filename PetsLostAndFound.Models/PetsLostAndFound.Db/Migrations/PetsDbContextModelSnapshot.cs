@@ -264,9 +264,13 @@ namespace PetsLostAndFound.Db.Migrations
 
                     b.Property<string>("Images");
 
+                    b.Property<double>("Latitude");
+
                     b.Property<bool>("LockoutEnabled");
 
                     b.Property<DateTimeOffset?>("LockoutEnd");
+
+                    b.Property<double>("Longitude");
 
                     b.Property<string>("NormalizedEmail")
                         .HasMaxLength(256);

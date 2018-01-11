@@ -32,6 +32,10 @@
         /// </summary>
         // public ICollection<Location> Locations { get; set; }
 
+        public double Latitude { get; set; }
+
+        public double Longitude { get; set; }
+
         /// <summary>
         /// User pets
         /// </summary>
