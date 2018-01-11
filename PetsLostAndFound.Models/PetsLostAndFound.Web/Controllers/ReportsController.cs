@@ -31,7 +31,7 @@
             //TODO 
             //TargetPetImagesId is coming as IEnumerable but the service is expecting string
 
-            //var result = this.reports.Create(
+            //var message = this.reports.Create(
             //    model.StatusType,
             //    model.UserId,
             //    model.TargetPetImagesId,
@@ -40,7 +40,7 @@
             //    model.Content,
             //    model.UserId);
 
-            return this.Ok(); //result
+            return this.Ok(); //message
         }
     }
 }

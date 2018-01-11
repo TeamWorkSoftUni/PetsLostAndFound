@@ -864,7 +864,8 @@
       },
       "PetsLostAndFound.Common/1.0.0": {
         "dependencies": {
-          "AutoMapper": "6.2.2"
+          "AutoMapper": "6.2.2",
+          "PetsLostAndFound.Db": "1.0.0"
         },
         "runtime": {
           "PetsLostAndFound.Common.dll": {}

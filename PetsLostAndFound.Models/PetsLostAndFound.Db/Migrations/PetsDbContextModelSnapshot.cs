@@ -175,11 +175,11 @@ namespace PetsLostAndFound.Db.Migrations
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd();
 
+                    b.Property<string>("Address");
+
                     b.Property<double>("Latitude");
 
                     b.Property<double>("Longitude");
-
-                    b.Property<string>("Town");
 
                     b.HasKey("Id");
 
@@ -193,8 +193,6 @@ namespace PetsLostAndFound.Db.Migrations
 
                     b.Property<int>("Age");
 
-                    b.Property<string>("ImageLinks");
-
                     b.Property<string>("Name")
                         .IsRequired();
 
@@ -203,8 +201,6 @@ namespace PetsLostAndFound.Db.Migrations
                     b.Property<int>("PetType");
 
                     b.Property<string>("RFID");
-
-                    b.Property<DateTime>("RegistrationDate");
 
                     b.Property<string>("UserId")
                         .IsRequired();
@@ -256,6 +252,8 @@ namespace PetsLostAndFound.Db.Migrations
 
                     b.Property<int>("AccessFailedCount");
 
+                    b.Property<string>("Address");
+
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken();
 
@@ -264,7 +262,7 @@ namespace PetsLostAndFound.Db.Migrations
 
                     b.Property<bool>("EmailConfirmed");
 
-                    b.Property<string>("Image");
+                    b.Property<string>("Images");
 
                     b.Property<bool>("LockoutEnabled");
 
@@ -283,8 +281,6 @@ namespace PetsLostAndFound.Db.Migrations
                     b.Property<bool>("PhoneNumberConfirmed");
 
                     b.Property<string>("SecurityStamp");
-
-                    b.Property<string>("TownName");
 
                     b.Property<bool>("TwoFactorEnabled");
 

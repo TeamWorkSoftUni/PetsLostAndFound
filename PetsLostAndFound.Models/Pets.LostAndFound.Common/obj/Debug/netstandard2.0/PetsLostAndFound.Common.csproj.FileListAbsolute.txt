@@ -16,3 +16,5 @@ C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAn
 C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.AssemblyInfo.cs
 C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.dll
 C:\Users\Alien\source\repos\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\obj\Debug\netstandard2.0\PetsLostAndFound.Common.pdb
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\bin\Debug\netstandard2.0\PetsLostAndFound.Db.dll
+E:\01. SoftUni\10. Practiacal work in team\FINAL PROJECT\PetsLostAndFound\PetsLostAndFound.Models\Pets.LostAndFound.Common\bin\Debug\netstandard2.0\PetsLostAndFound.Db.pdb

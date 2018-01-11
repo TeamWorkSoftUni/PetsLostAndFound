@@ -16,7 +16,7 @@
         {
             var location = new Location
             {
-                Town = address,
+                Address = address,
                 Latitude = latitude,
                 Longitude = longitude
             };

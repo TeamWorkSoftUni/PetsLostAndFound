@@ -14,9 +14,9 @@
         }
 
         // The town from which the user is from
-        public string TownName { get; set; }
+        public string Address { get; set; }
 
-        public string Image { get; set; }
+        public string Images { get; set; }
 
         /// <summary>
         /// Enum for which holds the type of roles , we should decide if we want to use enums or a bool is Admin

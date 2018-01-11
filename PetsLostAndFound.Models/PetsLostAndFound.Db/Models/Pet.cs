@@ -23,11 +23,7 @@
         
         public string RFID { get; set; }
         
-        public string ImageLinks { get; set; }
-
         public string PetDescription { get; set; }
-
-        public DateTime RegistrationDate { get; set; }
 
         public string UserId { get; set; }
 

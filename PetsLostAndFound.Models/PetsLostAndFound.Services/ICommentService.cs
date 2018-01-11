@@ -2,6 +2,7 @@
 {
     using PetsLostAndFound.Services.Models.Comments;
     using System.Collections.Generic;
+    using PetsLostAndFound.Common;
 
     public interface ICommentService
     {

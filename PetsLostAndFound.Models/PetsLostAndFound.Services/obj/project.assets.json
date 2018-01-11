@@ -1290,7 +1290,8 @@
         "type": "project",
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
-          "AutoMapper": "6.2.2"
+          "AutoMapper": "6.2.2",
+          "PetsLostAndFound.Db": "1.0.0"
         },
         "compile": {
           "bin/placeholder/PetsLostAndFound.Common.dll": {}

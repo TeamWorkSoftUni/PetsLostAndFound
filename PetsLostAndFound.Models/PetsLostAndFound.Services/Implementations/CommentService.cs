@@ -1,11 +1,12 @@
 ﻿namespace PetsLostAndFound.Services.Implementations
 {
     using System.Collections.Generic;
-    using PetsLostAndFound.Db;
-    using PetsLostAndFound.Db.Models;
-    using PetsLostAndFound.Services.Models.Comments;
+    using Db;
+    using Db.Models;
+    using Models.Comments;
     using System.Linq;
     using AutoMapper.QueryableExtensions;
+    using PetsLostAndFound.Common;
 
     public class CommentService : ICommentService
     {
@@ -38,7 +39,7 @@
 
             if (report == null || user == null)
             {
-                return new ResponseMessage { Success = false, Message = "Comment Not Added", Comment = content };
+                return new ResponseMessage { Success = false, Message = "Comment Not Added", Content = content };
             }
 
             var comment = new Comment
@@ -51,7 +52,7 @@
             this.db.Comments.Add(comment);
             this.db.SaveChanges();
 
-            return new ResponseMessage { Success = true, Message = "Comment added successfully", Comment = content };
+            return new ResponseMessage { Success = true, Message = "Comment added successfully", Content = content };
         }
 
         public bool IsExists(int id)
@@ -64,7 +65,7 @@
             this.db.Remove(comment);
             this.db.SaveChanges();
 
-            return new ResponseMessage { Success = true, Message = "Comment removed", Comment = comment.Content };
+            return new ResponseMessage { Success = true, Message = "Comment removed", Content = comment.Content };
         }
     }
 }

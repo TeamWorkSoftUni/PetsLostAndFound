@@ -9,6 +9,7 @@
     using System;
     using System.Collections.Generic;
     using System.Linq;
+    using PetsLostAndFound.Common;
     using PetsLostAndFound.Services.Models.Locations;
     using PetsLostAndFound.Services.Models.Pets;
 
@@ -33,7 +34,7 @@
                 .ProjectTo<ReportListingServiceModel>()
                 .ToList();
 
-        public ReportListingServiceModel Create(
+        public ResponseMessage Create(
             string statusType, 
             string userId, 
             string imagesLinksPost, 
@@ -62,7 +63,7 @@
             this.db.Reports.Add(report);
             this.db.SaveChanges();
 
-            return this.mapper.Map<ReportListingServiceModel>(report);
+            return new ResponseMessage { Success = true, Message = "Report added", Report = report};
         }
 
         public bool IsExist(int id)
