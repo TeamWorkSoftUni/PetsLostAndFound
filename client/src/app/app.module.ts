@@ -6,24 +6,23 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { FileUploadModule } from 'ng2-file-upload';
 import { ReportsModule } from './components/reports-store/reports.module';
-
+import { SharedModule } from './components/shared/shared.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './components/shared/header/header.component';
-import { FooterComponent } from './components/shared/footer/footer.component';
 import { LoginComponent } from './components/authentication/login/login.component';
-import  { HomeComponent } from './components/home/home.component';
+import { HomeComponent } from './components/home/home.component';
+//import { ReportsComponent } from './components/reports-store/reports/reports.component';
 
 import { HttpHeadersService } from './services/http-headers.service';
 import { AuthenticationService } from './services/authentication.service';
 import { UserService } from './services/user.service';
 
+
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent,
-    FooterComponent,
     LoginComponent,
     HomeComponent,
+   // ReportsComponent
   ],
   imports: [
     BrowserModule,
@@ -32,7 +31,8 @@ import { UserService } from './services/user.service';
     ReactiveFormsModule,
     HttpModule,
     FileUploadModule,
-    ReportsModule
+    ReportsModule,
+    SharedModule
   ],
   providers: [
     HttpHeadersService,

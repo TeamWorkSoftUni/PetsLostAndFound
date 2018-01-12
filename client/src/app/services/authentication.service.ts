@@ -5,7 +5,7 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { Constants } from '../constants/constants';
 
-const RegisterUrl: string = Constants.hostUrl + 'api/register';
+const RegisterUrl: string = Constants.hostUrl + 'api/account/register';
 const LoginUrl: string = Constants.hostUrl + 'api/login';
 const LogoutUrl: string = Constants.hostUrl + 'api/logout';
 const AuthToken: string = Constants.authTokent;
@@ -23,7 +23,7 @@ export class AuthenticationService {
     }
 
     register(userToRegister: Object): Observable<any> {
-        return this.http.post(RegisterUrl, userToRegister, {withCredentials: true})
+        return this.http.post(RegisterUrl, userToRegister)
             .map((res: Response) => {
                 let body = res.json();
                 let token = body.token;

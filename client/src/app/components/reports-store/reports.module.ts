@@ -7,6 +7,7 @@ import { ReportFormComponent } from './report-form/report-form.component';
 import { ImagesFormComponent } from './images-form/images-form.component';
 import { PetFormComponent } from './pet-form/pet-form.component';
 import { RegisterComponent} from '../../components/authentication/register/register.component';
+import { ReportsTemplateComponent } from '../shared/reportTemplate/reportsTemplate.component';
 
 // Modules
 import { CommonModule } from '@angular/common';
@@ -31,7 +32,8 @@ import { ReportService } from '../../services/report.service';
     ReportFormComponent,
     ImagesFormComponent,
     PetFormComponent,
-    RegisterComponent
+    RegisterComponent,
+    ReportsTemplateComponent
   ],
   imports: [ 
     CommonModule, 
@@ -49,6 +51,7 @@ import { ReportService } from '../../services/report.service';
   ],
   exports: [ 
     ReportsComponent,
+    ReportsTemplateComponent
     
   ],
   providers: [ 

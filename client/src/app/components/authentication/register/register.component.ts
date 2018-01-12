@@ -87,28 +87,26 @@ export class RegisterComponent implements OnInit {
   register(file): void {
     this.userToRegister.value.userImagesId = this.userImagesId
     console.log(JSON.stringify(this.userToRegister.value))
-      // this.authService
-      //     .register(this.userToRegister.value)
-      //     .subscribe((res: any) => {
-      //         this.userId = res.body.id;
-      //         this.userEmail = res.body.email;
-
-      //         this.stepOne = false;
-
-      //         this.router.navigate(['/home']);
+      this.authService
+          .register(this.userToRegister.value)
+          .subscribe((res: any) => {
+              // this.userId = res.body.id;
+              // this.userEmail = res.body.email;
+              console.log(res)
+              this.router.navigate(['/login']);
 
 
-      //       },
-      //     (err: any) => {
+            },
+          (err: any) => {
 
-      //         let notificationMsg = JSON.parse(err._body).message;
-      //         this.error = true
-      //         this.errorMessage = notificationMsg;
-      //         setTimeout(() => {
-      //             this.error = false;
+              let notificationMsg = JSON.parse(err._body).message;
+              this.error = true
+              this.errorMessage = notificationMsg;
+              setTimeout(() => {
+                  this.error = false;
 
-      //         }, 4500);
-      //     });
+              }, 4500);
+          });
       this.router.navigate(['/home']);
   }
 

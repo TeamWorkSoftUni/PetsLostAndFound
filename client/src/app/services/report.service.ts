@@ -6,6 +6,8 @@ import 'rxjs/add/operator/map';
 import { Constants } from '../constants/constants';
 
 const RegisterUrl: string = Constants.hostUrl + 'api/report';
+const ReportsGetUrl: string = Constants.hostUrl + 'api/reports';
+
 
 
 @Injectable()
@@ -32,5 +34,16 @@ export class ReportService {
             })
     }
 
-    
+    getAllReports(): Observable<any> {
+        return this.http.post(RegisterUrl, {withCredentials: true})
+            .map((res: Response) => {
+                console.log('HEREEEEE')
+                console.log(res)
+                
+                return {
+                    status: res.status,
+                    body: res.json()
+                }
+            })
+    }
 }
