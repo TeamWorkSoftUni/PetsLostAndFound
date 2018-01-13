@@ -23,10 +23,11 @@ export class AuthenticationService {
     }
 
     register(userToRegister: Object): Observable<any> {
-        return this.http.post(RegisterUrl, userToRegister)
+        return this.http.post(RegisterUrl, userToRegister, this.httpHedersService.getHeaders())
             .map((res: Response) => {
                 let body = res.json();
                 let token = body.token;
+                console.log(res)
 
                 localStorage.setItem(AuthToken, token);
                 return {
