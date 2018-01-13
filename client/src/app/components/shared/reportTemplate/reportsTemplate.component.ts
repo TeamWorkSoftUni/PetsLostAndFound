@@ -1,5 +1,6 @@
 import { Component, Input, OnInit  } from '@angular/core';
 import { Router } from '@angular/router';
+import { CloudinaryOptions, CloudinaryUploader } from 'ng2-cloudinary'
 
 import { IReportPreview } from '../../reports-store/reports/IReportPreview';
 import { UserService } from '../../../services/user.service';
@@ -24,10 +25,20 @@ export class ReportsTemplateComponent implements OnInit {
 
     public success: string;
     public error: boolean;
+    uploader: CloudinaryUploader = new CloudinaryUploader(
+      new CloudinaryOptions({ cloudName: 'dqoigfeno', uploadPreset: 'ntgsijh9' })
+    );
 
-    constructor() { }
+    constructor() {
+      
+     }
 
+  
     changeFilter(filter) { 
+      console.log(filter)
+      console.log(this.dogs)
+      console.log(this.reports)
+      
       switch(filter) {
         case 'all': this.reportToShow = this.reports; break;
         case 'dog': this.reportToShow = this.dogs; break;
@@ -40,7 +51,8 @@ export class ReportsTemplateComponent implements OnInit {
     } 
 
     ngOnInit(): void {
-      
+      console.log(this.reports)
+      this.changeFilter('all')
     }
 
 }

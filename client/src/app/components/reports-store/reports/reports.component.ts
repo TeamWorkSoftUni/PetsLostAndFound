@@ -19,14 +19,15 @@ export class ReportsComponent implements OnInit {
   ngOnInit() {
     this.reportService.getAllReports()
             .subscribe((reports) => {
-              this.reports = reports;
+              this.reports = reports.body;
               for(let report of this.reports) {
-                let petType = report.petType;
+                
+                let petType = report.pet.petType;
                 switch(petType) {
-                  case 'dog': this.dogs.push(report); break;
-                  case 'cat': this.cats.push(report); break;
-                  case 'birth': this.births.push(report); break;
-                  case 'other': this.others.push(report); break;
+                  case 0: this.dogs.push(report); break;
+                  case 1: this.cats.push(report); break;
+                  case 2: this.births.push(report); break;
+                  case 3: this.others.push(report); break;
                 }
               }
             });

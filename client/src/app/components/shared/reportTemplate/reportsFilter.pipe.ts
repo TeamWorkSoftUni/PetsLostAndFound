@@ -8,7 +8,7 @@ export class FilterdataPipe implements PipeTransform {
 
   transform(reports: Array<any>, arg: string): any { 
     return reports.filter(function(report){ 
-           return report.petType.toLowerCase().includes(arg.toLowerCase());
+           return report.pet.petType.toLowerCase().includes(arg.toLowerCase());
     })
   }
 }

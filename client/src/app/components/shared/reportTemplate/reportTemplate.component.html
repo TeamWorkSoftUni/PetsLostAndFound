@@ -4,36 +4,36 @@
             <ul>
                 <li class="nav-item">
                     <span>
-                        Show:
+                        Select pets:
                     </span>
                 </li>
 
-                <li class="nav-item"  [ngClass]="{'current': filterName === 'all'}">
+                <li class="nav-item"  [ngClass]="{'current': filterdata === 'all'}">
                     <strong (click)="changeFilter('all')">
                         All
                     </strong>
                 </li>
 
-                <li class="nav-item" [ngClass]="{'current': filterName === 'Male'}">
-                    <strong (click)="changeFilter('Male')">
+                <li class="nav-item" [ngClass]="{'current': filterdata === 0}">
+                    <strong (click)="changeFilter('dog')">
                         Dogs  
                     </strong>
                 </li>
 
-                <li class="nav-item" [ngClass]="{'current': filterName === 'Female'}">
-                    <strong (click)="changeFilter('Female')">
+                <li class="nav-item" [ngClass]="{'current': filterdata === 1}">
+                    <strong (click)="changeFilter('cat')">
                         Cats
                     </strong>
                 </li>
 				
-				<li class="nav-item" [ngClass]="{'current': filterName === 'Male'}">
-					<strong (click)="changeFilter('Male')">
+				<li class="nav-item" [ngClass]="{'current': filterdata === 2}">
+					<strong (click)="changeFilter('birth')">
 						Births  
 					</strong>
 				</li>
 	
-				<li class="nav-item" [ngClass]="{'current': filterName === 'Female'}">
-					<strong (click)="changeFilter('Female')">
+				<li class="nav-item" [ngClass]="{'current': filterName === 3}">
+					<strong (click)="changeFilter('other')">
 						Others
 					</strong>
 				</li>
@@ -42,14 +42,15 @@
     </nav>
     
 	<div class="container">
-		<div class="row" *ngFor="let report of reports">
+		<div class="row" *ngFor="let report of reportToShow">
 			<div class="card">
-				<img [src]="report.profilePicUrl"/>
-				<h4 class="card-text" style="width: 300px">{{report.petName}}</h4>
-				<h5 class="card-text" style="width: 300px">{{report.location}}</h5>
+				<cl-image [public-id]="report.imagesLinksPost" [cloud-name]="uploader.cloudName" height="300" width="400"></cl-image>
+
+				<h4 class="card-text" style="width: 300px">{{report.pet.name}}</h4>
+				<h5 class="card-text" style="width: 300px">{{report.location.address}}</h5>
 				<div class="row card-block" style="padding-top: 0; padding-left: 0">
 					<div class="btn btn-group">
-						<a class="btn btn-secondary" routerLink="/pet/details/" role="button">Ditails &raquo;</a>
+						<a class="btn btn-secondary" routerLink="{'/pet/details/'report.id}" role="button">Ditails &raquo;</a>
 						<a class="btn btn-danger" routerLink="/pet/delete" role="button">Delete</a>
 					</div>
 				</div>
