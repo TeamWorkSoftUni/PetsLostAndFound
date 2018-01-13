@@ -99,22 +99,24 @@ namespace PetsLostAndFound.Web
 
       if (env.IsDevelopment())
       {
-        app.UseDeveloperExceptionPage();
-        app.UseBrowserLink();
-        app.UseDatabaseErrorPage();
+            app.UseDeveloperExceptionPage();
+            app.UseBrowserLink();
+            app.UseDatabaseErrorPage();
       }
 
-            //app.UseStaticFiles();
+        //app.UseStaticFiles();
 
-            // app.UseAuthentication();
+        // app.UseAuthentication();
 
-            app.UseApplicationInsightsRequestTelemetry();
+        app.UseApplicationInsightsRequestTelemetry();
 
-            app.UseApplicationInsightsExceptionTelemetry();
+        app.UseApplicationInsightsExceptionTelemetry();
 
-            app.UseMvc();
+            
 
         app.UseCors("SiteCorsPolicy");
+
+        app.UseMvc();
     }
   }
 }
