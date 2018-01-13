@@ -9,6 +9,7 @@ namespace PetsLostAndFound.Web.Controllers
     using PetsLostAndFound.Web.Models.AccountViewModels;
     using System;
     using System.Threading.Tasks;
+    using Microsoft.AspNetCore.Cors;
     using PetsLostAndFound.Common;
 
 
@@ -88,6 +89,7 @@ namespace PetsLostAndFound.Web.Controllers
 
         [HttpPost]
         [AllowAnonymous]
+        [EnableCors("SiteCorsPolicy")]
         public async Task<IActionResult> Register([FromBody] PostRegisterRequestModel model, string returnUrl = null)
         {
             ViewData["ReturnUrl"] = returnUrl;

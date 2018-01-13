@@ -15,10 +15,25 @@ namespace PetsLostAndFound.Web
 
     public class Startup
   {
-    public Startup(IConfiguration configuration)
+    public Startup(IConfiguration configuration, IHostingEnvironment env)
     {
       Configuration = configuration;
-    }
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile("appsettings.json", optional: true, reloadOnChange: true)
+                .AddJsonFile($"appsettings.{env.EnvironmentName}.json", optional: true);
+
+            if (env.IsEnvironment("Development"))
+            {
+                // This will push telemetry data through Application Insights pipeline faster, allowing you to view results immediately.
+                builder.AddApplicationInsightsSettings(developerMode: true);
+            }
+
+            builder.AddEnvironmentVariables();
+            Configuration = builder.Build();
+        }
+
+   
     public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services)
@@ -42,7 +57,7 @@ namespace PetsLostAndFound.Web
 
             services.AddRouting(routing => routing.LowercaseUrls = true);
 
-            services.AddCors();
+            //services.AddCors();
 
             ////services.AddMvc();
             ////services.Configure<MvcOptions>(options =>
@@ -56,7 +71,21 @@ namespace PetsLostAndFound.Web
                     builder => builder.WithOrigins("http://localhost:4200"));
             });
 
-            services.AddMvc();
+            services.AddApplicationInsightsTelemetry(Configuration);
+            services.AddMvc().AddJsonOptions(options => options.SerializerSettings.ReferenceLoopHandling =
+                                                            Newtonsoft.Json.ReferenceLoopHandling.Ignore);
+
+            var corsBuilder = new Microsoft.AspNetCore.Cors.Infrastructure.CorsPolicyBuilder();
+            corsBuilder.AllowAnyHeader();
+            corsBuilder.AllowAnyMethod();
+            corsBuilder.AllowAnyOrigin(); // For anyone access.
+            //corsBuilder.WithOrigins("http://localhost:4200"); // for a specific url. Don't add a forward slash on the end!
+            corsBuilder.AllowCredentials();
+
+            services.AddCors(options =>
+            {
+                options.AddPolicy("SiteCorsPolicy", corsBuilder.Build());
+            });
 
             services.Configure<MvcOptions>(options =>
                 {
@@ -75,11 +104,17 @@ namespace PetsLostAndFound.Web
         app.UseDatabaseErrorPage();
       }
 
-      app.UseStaticFiles();
+            //app.UseStaticFiles();
 
-      app.UseAuthentication();
+            // app.UseAuthentication();
 
-      app.UseMvc();
+            app.UseApplicationInsightsRequestTelemetry();
+
+            app.UseApplicationInsightsExceptionTelemetry();
+
+            app.UseMvc();
+
+        app.UseCors("SiteCorsPolicy");
     }
   }
 }
