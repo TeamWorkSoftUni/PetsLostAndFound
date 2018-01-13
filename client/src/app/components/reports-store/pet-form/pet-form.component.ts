@@ -19,9 +19,9 @@ export class PetFormComponent implements OnInit {
   constructor() {
     this.model = {
       petType: '',
-      petName: '',
-      age: '',
-      description: ''
+      petName: 'no name',
+      age: '0',
+      description: 'ne desc'
     }
     console.log('tuks')
    }

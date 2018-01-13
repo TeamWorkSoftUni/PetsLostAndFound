@@ -40,9 +40,9 @@ export class ReportFormComponent implements OnInit {
       this.reportToRegister = this.fb.group({
           'statusType': ['', Validators.required],
           'lostFoundDate': ['', Validators.required],
-          'content': [''],
-          'rfid': [''],
-          'rewardSum': [''],
+          'content': ['no content'],
+          'rfid': ['no rfid'],
+          'rewardSum': ['0'],
       });
   }
 
@@ -75,7 +75,7 @@ export class ReportFormComponent implements OnInit {
   }
 
   register(file): void {
-    this.userId = 'string' //localStorage.getItem('userId')
+    this.userId = '328affdb-55c0-4e11-9996-e367b78037f5'//localStorage.getItem('userId')
     this.reportToRegister.value.location = this.location
     this.reportToRegister.value.userId = this.userId
     this.reportToRegister.value.targetPet = this.targetPet
@@ -83,28 +83,20 @@ export class ReportFormComponent implements OnInit {
     
 
     console.log(JSON.stringify(this.reportToRegister.value))
-      // this.authService
-      //     .register(this.userToRegister.value)
-      //     .subscribe((res: any) => {
-      //         this.userId = res.body.id;
-      //         this.userEmail = res.body.email;
+       this.reportService
+           .registerReport(JSON.stringify(this.reportToRegister.value))
+           .subscribe((res: any) => {
+               console.log(res)
 
-      //         this.stepOne = false;
-
-      //         this.router.navigate(['/home']);
+               this.router.navigate(['/home']);
 
 
-      //       },
-      //     (err: any) => {
+             },
+           (err: any) => {
 
-      //         let notificationMsg = JSON.parse(err._body).message;
-      //         this.error = true
-      //         this.errorMessage = notificationMsg;
-      //         setTimeout(() => {
-      //             this.error = false;
-
-      //         }, 4500);
-      //     });
+               let notificationMsg = JSON.parse(err._body).message;
+               console.log(notificationMsg)
+           });
       this.router.navigate(['/home']);
   }
 

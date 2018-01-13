@@ -6,7 +6,7 @@ import 'rxjs/add/operator/map';
 import { Constants } from '../constants/constants';
 
 const RegisterUrl: string = Constants.hostUrl + 'api/account/register';
-const LoginUrl: string = Constants.hostUrl + 'api/login';
+const LoginUrl: string = Constants.hostUrl + 'api/account/login';
 const LogoutUrl: string = Constants.hostUrl + 'api/logout';
 const AuthToken: string = Constants.authTokent;
 
@@ -29,7 +29,7 @@ export class AuthenticationService {
                 let token = body.token;
                 console.log(res)
 
-                localStorage.setItem(AuthToken, token);
+               // localStorage.setItem(AuthToken, token);
                 return {
                     status: res.status,
                     body: res.json()
@@ -38,12 +38,14 @@ export class AuthenticationService {
     }
 
     login(userToLogin: Object): Observable<any> {
-        return this.http.post(LoginUrl, userToLogin, {withCredentials: true})
+        return this.http.post(LoginUrl, userToLogin, this.httpHedersService.getHeaders())
             .map((res: Response) => {
                 let body = res.json();
                 let token = body.token;
 
                 localStorage.setItem(AuthToken, token);
+                localStorage.setItem('userId', body.id);
+                
                 this.loggedIn = true;
                 return {
                     status: res.status,

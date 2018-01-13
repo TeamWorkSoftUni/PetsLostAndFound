@@ -90,7 +90,7 @@ export class RegisterComponent implements OnInit {
       this.authService
           .register(JSON.stringify(this.userToRegister.value))
           .subscribe((res: any) => {
-              // this.userId = res.body.id;
+              //this.userId = res.body.id;
               // this.userEmail = res.body.email;
               console.log(res)
               this.router.navigate(['/login']);

@@ -35,32 +35,32 @@ export class LoginComponent implements OnInit {
   
   login(): void {
     console.log(this.userToLogin.value);
-      // this._authService.login(this.userToLogin.value)
-      //     .subscribe((res: any) => {
-      //         this.userService.getLoggedUser()
-      //             .subscribe((x) => {
-      //                 this.userService.loggedUser = x.user;
-      //                 console.log(x.user);
-      //                 this._router.navigate(['/home']);
+      this._authService.login(JSON.stringify(this.userToLogin.value))
+          .subscribe((res: any) => {
+              this.userService.getLoggedUser()
+                  .subscribe((x) => {
+                      this.userService.loggedUser = x.user;
+                      console.log(x.user);
+                      this._router.navigate(['/home']);
 
-      //             },
-      //             (error) => {
-      //                 localStorage.removeItem(AuthToken);
-      //                 this.userService.loggedUser = null;
-      //                 this._router.navigate(['/home']);
-      //                 console.log('Error in user service');
+                  },
+                  (error) => {
+                      localStorage.removeItem(AuthToken);
+                      this.userService.loggedUser = null;
+                      this._router.navigate(['/home']);
+                      console.log('Error in user service');
 
-      //             });
-      //     },
-      //     (err: any) => {
-      //         let notificationMsg = JSON.parse(err._body).message;
-      //         this.error = true;
-      //         this.errorMessage = notificationMsg;
-      //         setTimeout(() => {
-      //             this.error = false;
+                  });
+          },
+          (err: any) => {
+              let notificationMsg = JSON.parse(err._body).message;
+              this.error = true;
+              this.errorMessage = notificationMsg;
+              setTimeout(() => {
+                  this.error = false;
 
-      //         }, 2500);
-      //     });
+              }, 2500);
+          });
 
       this._router.navigate(['/home']);
   }

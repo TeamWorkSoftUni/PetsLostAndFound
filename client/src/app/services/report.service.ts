@@ -5,8 +5,8 @@ import { Observable } from 'rxjs';
 import 'rxjs/add/operator/map';
 import { Constants } from '../constants/constants';
 
-const RegisterUrl: string = Constants.hostUrl + 'api/report';
-const ReportsGetUrl: string = Constants.hostUrl + 'api/reports';
+const RegisterUrl: string = Constants.hostUrl + 'api/reports/create';
+const ReportsGetUrl: string = Constants.hostUrl + 'api/reports/all';
 
 
 
@@ -23,7 +23,7 @@ export class ReportService {
     }
 
     registerReport(reportToRegister: Object): Observable<any> {
-        return this.http.post(RegisterUrl, reportToRegister, {withCredentials: true})
+        return this.http.post(RegisterUrl, reportToRegister, this.httpHedersService.getHeaders())
             .map((res: Response) => {
                 let body = res.json();
                 
@@ -35,7 +35,7 @@ export class ReportService {
     }
 
     getAllReports(): Observable<any> {
-        return this.http.post(RegisterUrl, {withCredentials: true})
+        return this.http.get(ReportsGetUrl, this.httpHedersService.getHeaders())
             .map((res: Response) => {
                 console.log('HEREEEEE')
                 console.log(res)
