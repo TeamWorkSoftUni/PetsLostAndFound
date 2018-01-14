@@ -84,7 +84,7 @@ export class LocationFormComponent implements OnInit {
     this.latitude = event.lat;
     this.longitude = event.lng;
     this.selectedLocation.emit({
-      locationAdress: this.locationName,
+      locationAddress: this.locationName,
       latitude: this.latitude,
       longitude: this.longitude
     })

@@ -20,6 +20,7 @@ export class ReportsComponent implements OnInit {
     this.reportService.getAllReports()
             .subscribe((reports) => {
               this.reports = reports.body;
+              console.log(this.reports)
               for(let report of this.reports) {
                 
                 let petType = report.pet.petType;

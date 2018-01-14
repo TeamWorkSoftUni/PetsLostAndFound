@@ -1,0 +1,30 @@
+<div class="container">
+			<div class="card">
+
+				<cl-image [public-id]="report.targetPetImagesId" [cloud-name]="uploader.cloudName" height="300" width="400"></cl-image>
+
+        <h4 class="card-text" style="width: 300px">{{report.targetPet.petName}}</h4>
+        <div *ngIf="isLost">
+        <p >It was lost on: {{report.lostFoundDate}}</p>
+        <p>Reward amount: {{report.rewardSum}} EUR</p>
+      </div>
+        <p *ngIf="isFound">It was found on: {{report.lostFoundDate}}</p>
+        <p>{{report.content}}</p>
+        <h5 class="card-text" style="width: 300px">{{report.location.address}}</h5>
+       
+            <div class="container">
+              
+                    <p *ngIf="isLost" >It was lost here:</p>
+                 
+                    <p *ngIf="isFound">It was found HERE</p>
+              <agm-map [latitude]="latitude" [longitude]="longitude" [zoom]="zoom"
+              [mapTypeId]="mapType" >
+                <agm-marker [latitude]="latitude" [longitude]="longitude"></agm-marker>
+              </agm-map>
+              <button (click)="changeViewMap()">Change Map View</button>
+            </div>
+           
+         
+	
+			</div>
+</div>

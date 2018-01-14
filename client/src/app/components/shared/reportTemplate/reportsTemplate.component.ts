@@ -1,4 +1,4 @@
-import { Component, Input, OnInit  } from '@angular/core';
+import { Component, Input, OnInit, EventEmitter } from '@angular/core';
 import { Router } from '@angular/router';
 import { CloudinaryOptions, CloudinaryUploader } from 'ng2-cloudinary'
 
@@ -35,10 +35,6 @@ export class ReportsTemplateComponent implements OnInit {
 
   
     changeFilter(filter) { 
-      console.log(filter)
-      console.log(this.dogs)
-      console.log(this.reports)
-      
       switch(filter) {
         case 'all': this.reportToShow = this.reports; break;
         case 'dog': this.reportToShow = this.dogs; break;
@@ -51,7 +47,6 @@ export class ReportsTemplateComponent implements OnInit {
     } 
 
     ngOnInit(): void {
-      console.log(this.reports)
       this.changeFilter('all')
     }
 

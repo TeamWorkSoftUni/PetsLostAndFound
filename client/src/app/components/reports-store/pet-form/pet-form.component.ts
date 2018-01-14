@@ -23,7 +23,6 @@ export class PetFormComponent implements OnInit {
       age: '0',
       description: 'ne desc'
     }
-    console.log('tuks')
    }
 
   ngOnInit() {

@@ -7,6 +7,7 @@ import { Constants } from '../constants/constants';
 
 const RegisterUrl: string = Constants.hostUrl + 'api/reports/create';
 const ReportsGetUrl: string = Constants.hostUrl + 'api/reports/all';
+const ReportByIdGetUrl: string = Constants.hostUrl + 'api/reports/details';
 
 
 
@@ -37,9 +38,16 @@ export class ReportService {
     getAllReports(): Observable<any> {
         return this.http.get(ReportsGetUrl, this.httpHedersService.getHeaders())
             .map((res: Response) => {
-                console.log('HEREEEEE')
-                console.log(res)
-                
+                return {
+                    status: res.status,
+                    body: res.json()
+                }
+            })
+    }
+
+    getReportById(id): Observable<any> {
+        return this.http.get(ReportByIdGetUrl + '/' + id, this.httpHedersService.getHeaders())
+            .map((res: Response) => {
                 return {
                     status: res.status,
                     body: res.json()

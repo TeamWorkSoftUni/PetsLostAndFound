@@ -21,6 +21,8 @@ import { FileUploadModule } from 'ng2-file-upload';
 
 // Services
 import { ReportService } from '../../services/report.service';
+import { DetailsReportComponent } from './details-report/details-report.component';
+import { DeleteReportComponent } from './delete-report/delete-report.component';
 
 
 
@@ -33,7 +35,9 @@ import { ReportService } from '../../services/report.service';
     ImagesFormComponent,
     PetFormComponent,
     RegisterComponent,
-    ReportsTemplateComponent
+    ReportsTemplateComponent,
+    DetailsReportComponent,
+    DeleteReportComponent
   ],
   imports: [ 
     CommonModule, 

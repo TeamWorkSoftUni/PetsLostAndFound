@@ -42,7 +42,7 @@
     </nav>
     
 	<div class="container">
-		<div class="row" *ngFor="let report of reportToShow">
+		<div class="card" *ngFor="let report of reportToShow">
 			<div class="card">
 				<cl-image [public-id]="report.imagesLinksPost" [cloud-name]="uploader.cloudName" height="300" width="400"></cl-image>
 
